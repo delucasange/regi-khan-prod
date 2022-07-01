@@ -12,6 +12,11 @@ export default {
       description: "Titles should be catchy, descriptive, and not too long",
     },
     {
+      name: "client",
+      type: "string",
+      title: "Client",
+   },
+    {
       name: "slug",
       type: "slug",
       title: "Slug",
