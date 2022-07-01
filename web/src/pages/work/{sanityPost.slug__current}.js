@@ -1,14 +1,14 @@
 import { graphql } from "gatsby";
-import BlogPost from "../components/blog-post";
+import BlogPost from "../../components/blog-post";
 import React from "react";
-import GraphQLErrorList from "../components/graphql-error-list";
-import Layout from "../containers/layout";
-import Container from "../components/container";
-import SEO from "../components/seo";
-import { toPlainText } from "../lib/helpers";
+import GraphQLErrorList from "../../components/graphql-error-list";
+import Layout from "../../containers/layout";
+import Container from "../../components/container";
+import SEO from "../../components/seo";
+import { toPlainText } from "../../lib/helpers";
 
 export const query = graphql`
-  query BlogPostTemplateQuery($id: String!) {
+  query BlogPost($id: String!) {
     post: sanityPost(id: { eq: $id }) {
       id
       publishedAt
@@ -21,6 +21,7 @@ export const query = graphql`
         alt
       }
       title
+      client
       slug {
         current
       }
@@ -73,6 +74,7 @@ const BlogPostTemplate = (props) => {
 
       {errors && (
         <Container>
+            
           <GraphQLErrorList errors={errors} />
         </Container>
       )}

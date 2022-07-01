@@ -7,12 +7,13 @@ export default {
       name: "title",
       type: "string",
       title: "Title",
+      description: "Keep it small case",
     },
     {
       name: "order",
       type: "number",
       title: "Order",
-      descripton: "Order your categories with 0 being the first",
+      description:"Order your categories from 1 onwards."
     },
     {
       name: "description",
