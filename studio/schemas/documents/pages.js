@@ -25,6 +25,11 @@ export default {
         title: "Image",
       },
       {
+        name: "description",
+        type: "text",
+        title: "Description",
+      },
+      {
         name: "bio",
         type: "bioPortableText",
         title: "Biography",

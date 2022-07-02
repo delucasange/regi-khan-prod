@@ -1,28 +1,22 @@
-import { Link } from "gatsby";
-import React from "react";
-import Icon from "./icon";
+import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
-const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
-  <div>
-    <div>
-      <div>
-        <Link to="/">{siteTitle}</Link>
-      </div>
+const ComponentName = () => {
+  const data = useStaticQuery(graphql`
+    {
+      sanitySiteSettings {
+        title
+        subtitle
+        keywords
+      }
+    }
+  `)
 
-      <button onClick={showNav ? onHideNav : onShowNav}
-      >
-        <Icon symbol="hamburger" />
-      </button>
+  const siteTitle = data.sanitySiteSettings.title;
 
-      <nav>
-        <ul>
-          <li>
-            <Link to="/archive/">Archive</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-);
+  return (<>
+  <Link to="/"><h1>{siteTitle} {data.sanitySiteSettings.subtitle}</h1></Link>
+  </>)
+}
 
-export default Header;
+export default ComponentName

@@ -13,7 +13,7 @@ export default {
       name: "order",
       type: "number",
       title: "Order",
-      description:"Order your categories from 1 onwards."
+      description:"Order your categories from 0 being your first, onwards."
     },
     {
       name: "description",
