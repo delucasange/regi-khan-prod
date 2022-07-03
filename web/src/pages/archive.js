@@ -3,7 +3,7 @@ import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import React from "react";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import { graphql } from "gatsby";
 import { mapEdgesToNodes } from "../lib/helpers";
 
@@ -48,7 +48,7 @@ const ArchivePage = (props) => {
 
   return (
     <Layout>
-      <SEO title="Archive" />
+      <Seo title="Archive" />
       <Container>
         <h1>Archive</h1>
         {postNodes && postNodes.length > 0 && (

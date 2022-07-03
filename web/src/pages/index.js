@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import WorkList from "../components/workList";
 
 const workIndex = ({ data }) => {
@@ -11,7 +11,7 @@ console.log(works);
 return(
 <>
 <Layout>
-<SEO title="Index" description={data.subtitle} />
+<Seo title="Index" description={data.subtitle} />
 
 <WorkList works={works} title="All Works"/>
 
