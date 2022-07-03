@@ -28,7 +28,7 @@ const Navigation = () => {
       <div className="navbar">
       <Link to="/">Index</Link>  
       <Link to="/about">about</Link> {group.map( tag => (
-        <Link to={`/work/${tag.fieldValue}`} state={{ filter:`${tag.fieldValue}` }} activeStyle={{ color: "red" }}>
+        <Link to={`/work/${tag.fieldValue}`} state={{ category:`${tag.fieldValue}` }} activeStyle={{ color: "red" }}>
         <li key={tag.fieldValue}> <p className="navtag">{tag.fieldValue}{tag.totalCount}</p></li></Link>)
       )}
       </div>
