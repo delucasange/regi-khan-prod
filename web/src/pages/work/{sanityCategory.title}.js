@@ -5,15 +5,18 @@ import SEO from "../../components/seo";
 import WorkList from "../../components/workList";
 
 const CategoryPage = ({ data, location }) => {
-    const works = data.posts.nodes;
-    console.log(data);
-console.log(location.state.category);
+const works = data.posts.nodes;
+console.log(data);
+const { state = {} } = location;
+const { category } = state;
+
+console.log(category);
 return(
 <>
 <Layout>
-<SEO title={location.state.category} description={data.subtitle} />
+<SEO title={category} description={data.subtitle} />
 
-<WorkList works={works} title={location.state.category}/>
+<WorkList works={works} title={category}/>
 
 </Layout>
 </>
