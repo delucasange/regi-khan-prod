@@ -1,7 +1,7 @@
 # regi-khan-prod
 
 
-Testing this update!
+Testing this update v2.
 
 _Fully customizable blog template with a React.js front-end._
 
