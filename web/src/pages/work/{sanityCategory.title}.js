@@ -7,13 +7,14 @@ import WorkList from "../../components/workList";
 const CategoryPage = ({ data, location }) => {
     const works = data.posts.nodes;
     console.log(data);
+    const filter = location.state.filter;
 
 return(
 <>
 <Layout>
-<SEO title={location.state.filter} description={data.subtitle} />
+<SEO title={filter} description={data.subtitle} />
 
-<WorkList works={works} title={location.state.filter}/>
+<WorkList works={works} title={filter}/>
 
 </Layout>
 </>
