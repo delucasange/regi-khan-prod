@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.RespNavWrap {
+    @apply z-40 flex md:hidden;
+}
+.navWrap {
+    @apply flex z-40 md:h-0;
+}
+
+.toggleMenu {
+    @apply z-40 w-full bg-red-50 text-5xl m-auto pb-4 fixed inset-x-0 bottom-0 md:hidden;
+}
+
+.RespNavbar {
+    @apply text-5xl mx-auto list-none flex flex-col gap-9 capitalize m-auto; 
+}
+
+.navbar {
+    @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-white md:to-transparent pb-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl;
+}
+.active-link {
+    @apply underline;
+}
+

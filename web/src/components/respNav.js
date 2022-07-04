@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import Popup from './popup';
 
 //  <div className="navWrap">
 // </div>
-const Navigation = ( ) => {
+const RespNav = ( ) => {
     const data = useStaticQuery(graphql`{
       allSanityCategory(sort: {fields: order, order: ASC}) {
         nodes {
@@ -16,8 +17,21 @@ const Navigation = ( ) => {
     `)
     const catPost = data.allSanityCategory.nodes;
 
+    const [isOpen, setIsOpen] = useState(false);
+ 
+    const togglePopup = () => {
+      setIsOpen(!isOpen);
+    }
+
     return ( <>
-      <div className="navbar">
+  
+  <div className="RespNavWrap">
+    <div className="toggleMenu" role="menu"  onClick={togglePopup} onKeyDown={togglePopup}>Menu</div>
+ 
+      {isOpen && 
+    <Popup
+      content={
+      <div className="RespNavbar">
       <Link to="/about"><li>about</li></Link>
   
       {catPost.map( tag => ( 
@@ -26,9 +40,14 @@ const Navigation = ( ) => {
       )}
       <Link to="/"><li>All</li></Link>
       </div>
+
+      }
+      handleClose={togglePopup}
+    />}
+    </div>
     </> 
     
 );
 }
  
-export default Navigation;
+export default RespNav;
