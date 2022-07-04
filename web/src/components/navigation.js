@@ -10,30 +10,20 @@ const Navigation = ( ) => {
           id
         }
       }
-      allSanityPost {
-        group(field: categories___title) {
-          fieldValue
-          totalCount
-        }
-        totalCount
-      }
     }  
     `)
-    console.log(data);
     const catPost = data.allSanityCategory.nodes;
-    const group = data.allSanityPost.group;
 
     return ( 
       <>
       <div className="navbar">
       <Link to="/">Index</Link>  
-      <Link to="/about">about</Link> {group.map( tag => (
-        <Link to={`/work/${tag.fieldValue}`} state={{ category:`${tag.fieldValue}` }} activeStyle={{ color: "red" }}>
-        <li key={tag.fieldValue}> <p className="navtag">{tag.fieldValue}{tag.totalCount}</p></li></Link>)
+      <Link to="/about">about</Link>
+  
+      {catPost.map( tag => ( 
+        <Link key={tag.title} to={`/work/${tag.title}`} state={{ category:`${tag.title}` }} activeStyle={{ color: "red" }}>
+        <li key={tag.title}> <p className="navtag">{tag.title}</p></li></Link>)
       )}
-      </div>
-      <div>
-        <p>{catPost.map((cat)=> <li>{cat.title}</li> )}</p>
       </div>
       </>
      );
