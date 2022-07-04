@@ -16,7 +16,7 @@ const Navigation = ( ) => {
 
     return ( 
       <>
-      <div className="navbar">
+      <div className="w-full flex flex-row">
       <Link to="/">Index</Link>  
       <Link to="/about">about</Link>
   
