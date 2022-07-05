@@ -2,8 +2,8 @@ import { differenceInDays, formatDistance, format } from "date-fns";
 import Container from "./container";
 import PortableText from "./portableText";
 import React from "react";
-import { buildImageObj } from "../lib/helpers";
-import { imageUrlFor } from "../lib/image-url";
+//import { buildImageObj } from "../lib/helpers";
+//import { imageUrlFor } from "../lib/image-url";
 import Video from "./video";
 
 function BlogPost(props) {
