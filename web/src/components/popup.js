@@ -3,11 +3,11 @@ import React from "react";
 const Popup = props => {
   return (
    
-    <div className="popupbox">
-      <div className="box">
+    <div>
+      <div>
       {props.content}
 
-      <div className="fixed bottom-0 z-40 w-full md:hidden" onClick={props.handleClose} onKeyPress={props.handleClose}><div className="">CLOSE</div></div>
+      <div className="RespClose" onClick={props.handleClose} onKeyPress={props.handleClose}><div className="">Close</div></div>
       </div>
     </div>
    

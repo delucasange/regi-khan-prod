@@ -2,19 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Respnsive Navigation */
 .RespNavWrap {
     @apply z-40 flex md:hidden;
 }
-.navWrap {
-    @apply flex z-40 md:h-0;
-}
 
 .toggleMenu {
-    @apply z-40 w-full bg-red-50 text-5xl m-auto pb-4 fixed inset-x-0 bottom-0 md:hidden;
+    @apply z-40 w-full bg-gradient-to-t from-white to-transparent text-5xl m-auto text-center pb-4 fixed inset-x-0 bottom-0 md:hidden;
 }
 
 .RespNavbar {
-    @apply text-5xl mx-auto list-none flex flex-col gap-9 capitalize m-auto; 
+    @apply z-40 absolute bg-white w-full text-5xl flex h-screen list-none capitalize; 
+}
+
+.RespOptions{
+    @apply flex flex-col my-auto pl-10 gap-4;
+}
+
+.RespClose {
+    @apply fixed bottom-0 z-40 w-full text-center pb-4 text-5xl md:hidden;
+}
+/* Desktop Navigation */
+.navWrap {
+    @apply flex z-40 md:h-0;
 }
 
 .navbar {
@@ -23,4 +33,5 @@
 .active-link {
     @apply underline;
 }
+
 

@@ -32,6 +32,7 @@ const RespNav = ( ) => {
     <Popup
       content={
       <div className="RespNavbar">
+        <ul className="RespOptions">
       <Link to="/about"><li>about</li></Link>
   
       {catPost.map( tag => ( 
@@ -39,6 +40,7 @@ const RespNav = ( ) => {
         <li key={tag.title}> <p className="navtag">{tag.title}</p></li></Link>)
       )}
       <Link to="/"><li>All</li></Link>
+      </ul>
       </div>
 
       }

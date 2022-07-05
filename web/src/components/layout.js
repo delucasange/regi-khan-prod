@@ -10,7 +10,7 @@ const Layout = ({ children, siteTitle }) => (
     <Navigation />
     <RespNav />
   
-    <div class="z-0">{children}</div>
+    <div className="z-0">{children}</div>
     <Footer />
   </>
 );

@@ -8,7 +8,6 @@ import { imageUrlFor } from "../lib/image-url";
 function BlogPost(props) {
   const {
     _rawBody,
-    authors,
     categories,
     title,
     client,
@@ -17,7 +16,7 @@ function BlogPost(props) {
   } = props;
   return (
     <article>
-      {mainImage && mainImage.asset && (
+ {mainImage && mainImage.asset && (
         <div>
           <img
             src={imageUrlFor(buildImageObj(mainImage))
