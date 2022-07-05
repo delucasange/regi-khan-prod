@@ -25,6 +25,11 @@ export const query = graphql`
       slug {
         current
       }
+      videos {
+        videoOrder
+        url
+        title
+      }
       _rawExcerpt(resolveReferences: { maxDepth: 5 })
       _rawBody(resolveReferences: { maxDepth: 5 })
       authors {
@@ -57,7 +62,6 @@ export const query = graphql`
     }
   }
 `;
-
 const BlogPostTemplate = (props) => {
   const { data, errors } = props;
   const post = data && data.post;

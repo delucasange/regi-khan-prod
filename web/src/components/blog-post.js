@@ -4,6 +4,7 @@ import PortableText from "./portableText";
 import React from "react";
 import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
+import Video from "./video";
 
 function BlogPost(props) {
   const {
@@ -11,31 +12,28 @@ function BlogPost(props) {
     categories,
     title,
     client,
-    mainImage,
+    videos,
+//    mainImage,
     publishedAt,
   } = props;
   return (
     <article>
- {mainImage && mainImage.asset && (
-        <div>
-          <img
-            src={imageUrlFor(buildImageObj(mainImage))
-              .width(1200)
-              .height(Math.floor((9 / 16) * 1200))
-              .fit("crop")
-              .auto("format")
-              .url()}
-            alt={mainImage.alt}
-          />
-        </div>
-      )}
       <Container>
         <div>
           <div>
             <h1>{title}</h1>
             <p>{client}</p>
-            {_rawBody && <PortableText blocks={_rawBody} />}
           </div>
+          {videos && (  
+            <div>
+               {videos.map((video)=> <Video key={video.title} videoSrcURL={video.url} videoTitle={video.title} />
+               )}
+            </div>
+          )}
+          <p>
+          {_rawBody && <PortableText blocks={_rawBody} />}
+          </p>
+
           <aside>
             {publishedAt && (
               <div>
@@ -57,5 +55,18 @@ function BlogPost(props) {
     </article>
   );
 }
+//      {mainImage && mainImage.asset && (
+//  <div>
+//  <img
+//    src={imageUrlFor(buildImageObj(mainImage))
+//      .width(1200)
+//      .height(Math.floor((9 / 16) * 1200))
+//      .fit("crop")
+//      .auto("format")
+//     .url()}
+//    alt={mainImage.alt}
+//  />
+//</div>
+//)}
 
 export default BlogPost;
