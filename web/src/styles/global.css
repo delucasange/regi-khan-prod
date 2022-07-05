@@ -34,4 +34,12 @@
     @apply underline;
 }
 
+/* Components */
 
+.videoStyle {
+    @apply mt-10 mb-10 w-full aspect-video;
+}
+
+.storyStyle {
+    @apply mt-10 mb-10 w-full aspect-[9/16];
+}

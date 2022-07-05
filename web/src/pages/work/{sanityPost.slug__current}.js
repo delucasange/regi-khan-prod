@@ -26,7 +26,10 @@ export const query = graphql`
         current
       }
       videos {
-        videoOrder
+        url
+        title
+      }
+      stories {
         url
         title
       }

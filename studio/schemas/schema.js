@@ -9,6 +9,7 @@ import pages from "./documents/pages";
 import author from "./documents/author";
 import category from "./documents/category";
 import video from "./documents/video";
+import story from "./documents/story";
 import post from "./documents/post";
 import siteSettings from "./documents/siteSettings";
 
@@ -19,6 +20,7 @@ import excerptPortableText from "./objects/excerptPortableText";
 import mainImage from "./objects/mainImage";
 import authorReference from "./objects/authorReference";
 import videoReference from "./objects/videoReference";
+import storyReference from "./objects/storyReference";
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -35,10 +37,12 @@ export default createSchema({
     author,
     category,
     video,
+    story,
     pages,
     mainImage,
     authorReference,
     videoReference,
+    storyReference,
     bodyPortableText,
     bioPortableText,
     excerptPortableText,

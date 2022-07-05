@@ -82,6 +82,19 @@ export default {
       ],
     },
     {
+      name: "stories",
+      type: "array",
+      title: "Stories",
+      of: [
+        {
+          type: "reference",
+          to: {
+            type: "story",
+          },
+        },
+      ],
+    },
+    {
       name: "body",
       type: "bodyPortableText",
       title: "Body",
