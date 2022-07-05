@@ -18,16 +18,5 @@ export default {
         scheme: ['http', 'https']
       })
     },
-    {
-      name: "storyOrder",
-      type: "number",
-      title: "Story Order",
-      description:"Order your stories from 0 being your first, onwards."
-    },
-    {
-      name: "description",
-      type: "text",
-      title: "Description",
-    },
   ],
 };

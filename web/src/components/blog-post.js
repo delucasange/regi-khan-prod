@@ -20,9 +20,8 @@ function BlogPost(props) {
     <article>
       <Container>
         <div>
-          <div>
-            <h1>{title}</h1>
-            <p>{client}</p>
+          <div className="flex flex-row gap-2">
+            <h1 className="">{title}</h1><p className="">for</p><p className="">{client}</p>
           </div>
           {videos && (  
             <div>
@@ -30,24 +29,26 @@ function BlogPost(props) {
                )}
             </div>
           )}
-          <p>
+          <div className="portableText">
           {_rawBody && <PortableText blocks={_rawBody} />}
-          </p>
+          </div>
 
-          <aside>
-            {publishedAt && (
+          <aside className="footerBox">
+            {/* {publishedAt && (
               <div>
                 {differenceInDays(new Date(publishedAt), new Date()) > 3
                   ? formatDistance(new Date(publishedAt), new Date())
                   : format(new Date(publishedAt), "MMMM Mo, yyyy")}
               </div>
-            )}
+            )} */}
             {categories && (     
-                <ul>
+              <div className="categoriesPost">
+                <p className="pr-4">TAGS:</p> <ul>
                   {categories.map((category) => (
-                    <li key={category._id}>{category.title}</li>
+                    <li key={category._id} className="capitalize">{category.title}</li>
                   ))}
                 </ul>
+              </div>
             )}
           </aside>
         </div>

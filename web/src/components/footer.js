@@ -5,9 +5,7 @@ const Footer = () => {
         <footer>
       <div>
         <div>
-          &copy; {new Date().getFullYear()}, Built with{" "}
-          <a href="https://www.sanity.io">Sanity</a> &amp;{" "}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+         © {new Date().getFullYear()} REGINA KHANIPOVA
         </div>
       </div>
     </footer>
