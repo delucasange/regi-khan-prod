@@ -69,6 +69,19 @@ export default {
       ],
     },
     {
+      name: "videos",
+      type: "array",
+      title: "Videos",
+      of: [
+        {
+          type: "reference",
+          to: {
+            type: "video",
+          },
+        },
+      ],
+    },
+    {
       name: "body",
       type: "bodyPortableText",
       title: "Body",
