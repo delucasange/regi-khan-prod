@@ -1,0 +1,69 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/lib/node_modules/@sanity/cli/vendor/yarn install --check-files --json --non-interactive --ignore-engines --network-timeout 60000 --registry https://registry.npmjs.org
+
+PATH: 
+  /usr/local/lib/node_modules/vendor:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.16.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.npmjs.org/@babel/helper-wrap-function/-/helper-wrap-function-7.18.6.tgz: Request failed "503 Service Unavailable"
+      at Request.<anonymous> (/usr/local/lib/node_modules/@sanity/cli/vendor/yarn:78657:16)
+      at Request.emit (events.js:315:20)
+      at Request.module.exports.Request.onRequestResponse (/usr/local/lib/node_modules/@sanity/cli/vendor/yarn:136195:10)
+      at ClientRequest.emit (events.js:315:20)
+      at HTTPParser.parserOnIncomingClient (_http_client.js:641:27)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:126:17)
+      at HTTPParser.execute (<anonymous>)
+      at TLSSocket.socketOnData (_http_client.js:509:22)
+      at TLSSocket.emit (events.js:315:20)
+      at addChunk (internal/streams/readable.js:309:12)
+
+npm manifest: 
+  {
+    "private": true,
+    "name": "blog-with-gatsby-studio",
+    "version": "1.0.15",
+    "main": "package.json",
+    "author": "Sanity <hello@sanity.io>",
+    "scripts": {
+      "dev": "sanity start",
+      "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
+      "build": "sanity build",
+      "graphql-deploy": "sanity graphql deploy --playground",
+      "lint": "eslint .",
+      "test": "sanity check"
+    },
+    "dependencies": {
+      "@sanity/base": "^2.30.1",
+      "@sanity/cli": "^2.30.2",
+      "@sanity/components": "^2.14.0",
+      "@sanity/core": "^2.30.2",
+      "@sanity/dashboard": "^2.30.1",
+      "@sanity/default-layout": "^2.30.1",
+      "@sanity/default-login": "^2.30.1",
+      "@sanity/desk-tool": "^2.30.1",
+      "@sanity/studio-hints": "^2.29.8",
+      "date-fns": "^2.28.0",
+      "prop-types": "^15.8.1",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-icons": "^4.3.1",
+      "sanity-plugin-dashboard-widget-document-list": "^0.0.13",
+      "sanity-plugin-dashboard-widget-netlify": "^1.2.1",
+      "styled-components": "^5.3.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

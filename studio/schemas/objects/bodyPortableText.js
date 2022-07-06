@@ -1,3 +1,13 @@
+import React from 'react'
+
+// const Role = props => (
+//   <span className="roleStyle">{props.children}</span>
+// );
+
+// const Person = props => (
+//   <span className="personStyle">{props.children}</span>
+// );
+
 export default {
   name: "bodyPortableText",
   type: "array",
@@ -27,8 +37,11 @@ export default {
         // Decorators usually describe a single property – e.g. a typographic
         // preference or highlighting by editors.
         decorators: [
-          { title: "Strong", value: "strong" },
-          { title: "Emphasis", value: "em" },
+          { "title": "Strong", "value": "strong" },
+          { "title": "Emphasis", "value": "em" },
+          { "title": "Code", "value": "code" },
+          { "title": "Underline", "value": "underline" },
+          { "title": "Strike", "value": "strike-through" }
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [

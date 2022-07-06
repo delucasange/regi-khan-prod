@@ -21,11 +21,11 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
-    "lerna": "^4.0.0",
+    "lerna": "^3.10.8",
     "prettier": "^2.5.1"
   },
   "dependencies": {
-    "@sanity/core": "^0.139.3",
+    "@sanity/core": "^2.30.2",
     "@sanity/ui": "^0.37.12",
     "bindings": "^1.5.0",
     "nan": "^2.16.0"

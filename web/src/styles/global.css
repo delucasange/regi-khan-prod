@@ -37,17 +37,40 @@
 /* Components */
 
 .videoStyle {
-    @apply inline w-full aspect-video;
+    @apply inline w-full px-20 aspect-video;
 }
 
 .storyStyle {
     @apply mt-10 mb-10 w-full aspect-[9/16];
 }
 
+
+
 .portableText {
-    @apply pt-20 pb-10 w-8/12 mx-auto text-left text-3xl;
+    @apply  pt-20 pb-10 w-8/12 mx-auto text-center text-3xl;
 }
 
 .categoriesPost {
     @apply w-full justify-center flex flex-row text-3xl pb-40;
+}
+
+p.RoleStyle {
+    @apply uppercase text-xl;
+}
+
+p.PersonStyle {
+    @apply text-sm;
+}
+
+
+/* Grid on home */
+.workList {
+    @apply grid grid-cols-3;
+}
+
+.infoBoxWL {
+    @apply text-center;
+}
+.catWL {
+    @apply w-full flex flex-row justify-center gap-2 capitalize;
 }

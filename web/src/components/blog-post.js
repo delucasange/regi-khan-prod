@@ -16,6 +16,8 @@ function BlogPost(props) {
 //  mainImage,
 // publishedAt,
   } = props;
+
+
   return (
     <article>
       <Container>
@@ -32,6 +34,7 @@ function BlogPost(props) {
           <div className="portableText">
           {_rawBody && <PortableText blocks={_rawBody} />}
           </div>
+          
 
           <aside className="footerBox">
             {/* {publishedAt && (
