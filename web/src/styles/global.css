@@ -71,6 +71,9 @@ p.PersonStyle {
 .infoBoxWL {
     @apply text-center;
 }
+.mainInfoWL {
+    @apply w-full flex flex-row justify-center gap-2;
+}
 .catWL {
     @apply w-full flex flex-row justify-center gap-2 capitalize;
 }

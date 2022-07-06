@@ -22,8 +22,9 @@ const WorkList = ({works, title}) => {
                alt={work.mainImage.alt}
             />
             <div className="infoBoxWL">
-            <h1>{work.title}</h1>
-            <p>{work.client}</p>
+            <span className="mainInfoWL">
+            <h1>{work.title}</h1><p className="italic">for</p><p>{work.client}</p>
+            </span>
                 <ul className="catWL">{work.categories.map((category) => (
                     <li key={category._id}>{category.title}</li>
                   ))}</ul>
