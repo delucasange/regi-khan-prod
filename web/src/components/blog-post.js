@@ -1,4 +1,4 @@
-import { differenceInDays, formatDistance, format } from "date-fns";
+// import { differenceInDays, formatDistance, format } from "date-fns";
 import Container from "./container";
 import PortableText from "./portableText";
 import React from "react";
@@ -13,8 +13,8 @@ function BlogPost(props) {
     title,
     client,
     videos,
-//    mainImage,
-    publishedAt,
+//  mainImage,
+// publishedAt,
   } = props;
   return (
     <article>
