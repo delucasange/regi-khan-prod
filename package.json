@@ -25,7 +25,7 @@
     "prettier": "^2.5.1"
   },
   "dependencies": {
-    "@sanity/core": "^2.30.2",
+    "@sanity/core": "^0.139.3",
     "@sanity/ui": "^0.37.12",
     "bindings": "^1.5.0",
     "nan": "^2.16.0"
