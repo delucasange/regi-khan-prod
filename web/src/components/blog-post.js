@@ -23,10 +23,10 @@ console.log({_rawBody});
     <article>
       <Container>
         <div>
-
-          <div className="titleBox">
+        <div className="titleBox">
           <h1><span className="mainTitle">{title}</span><span className="mainItalic">for</span><span className="mainClient">{client}</span></h1>  
           </div>
+          
 
           {videos && (  
             <div>

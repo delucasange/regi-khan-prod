@@ -12,8 +12,9 @@ const WorkList = ({works, title}) => {
       <div className="workList">
         {works.map((work) =>(
         <Link to={`/work/${work.slug.current}`}>
-        <article key={work.id} >
-            <img src={imageUrlFor(buildImageObj(work.mainImage))
+  <article className="group gridModule" key={work.id} >
+
+            <img className="gridMImg" src={imageUrlFor(buildImageObj(work.mainImage))
               .width(1200)
               .height(Math.floor((9 / 16) * 1200))
               .fit("crop")
@@ -21,15 +22,23 @@ const WorkList = ({works, title}) => {
               .url()}
                alt={work.mainImage.alt}
             />
-            <div className="infoBoxWL">
-            <span className="mainInfoWL">
-            <h1 className="projTitle">{work.title}</h1><p className="italic">for</p><p className="projClient">{work.client}</p>
-            </span>
-                <ul className="catWL">{work.categories.map((category) => (
+
+         <div>
+      <div className="mMargin">
+      <div className="gridtitleBox">
+            <h1>
+                <span className="gridTitle">{work.title}</span><span className="gridItalic">for</span><span className="gridClient">{work.client}</span>
+            </h1> 
+        </div>
+          <ul className="catWL">
+            {work.categories.map((category) => (
                     <li key={category._id}>{category.title}</li>
-                  ))}</ul>
-            </div>
-        </article></Link>
+                  ))}
+          </ul>
+          </div>
+      </div>
+      
+  </article></Link>
         ))}
       </div>  
       </>
