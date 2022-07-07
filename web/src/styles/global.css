@@ -97,29 +97,29 @@ PersonStyle {
 
 /* Work List Grid on home */
 .workList {
-    @apply grid grid-cols-1 md:px-20 md:grid-cols-3;
+    @apply grid grid-cols-1 md:px-10 md:grid-cols-3;
 }
 .workListTitle {
     @apply text-sm font-goodsans py-6 pl-10 capitalize;
 }
 /* Grid: Title per box */
 .gridModule {
-    @apply transition-all ease-in delay-75 md:bg-pink-200 md:hover:rounded-full;
+    @apply transition-all ease-in delay-100 md:bg-pink-200 md:hover:rounded-full;
 }
 .gridMImg {
     @apply  md:opacity-100 md:group-hover:opacity-0;
 }
 .mMargin {
-    @apply md:-mt-44 md:pb-5 md:pt-0 ;
+    @apply  md:-mt-48 md:pb-8 md:pt-2.5 ;
 }
 .gridtitleBox{
-    @apply pt-2 px-20 flex flex-row justify-center text-center w-full opacity-100 md:z-40 /* md:-mt-44 md:pb-9 md:pt-0 */ md:opacity-0 md:group-hover:opacity-100;
+    @apply pt-2 md:-mt-2 px-28 flex flex-row justify-center text-center w-full opacity-100 md:z-40 /* md:-mt-44 md:pb-9 md:pt-0 */ md:opacity-0 md:group-hover:opacity-100;
 }
 .gridTitle, .gridClient {
-    @apply font-favorit text-base text-black font-light;
+    @apply font-favorit text-lg text-black font-light;
 }
 .gridItalic {
-    @apply font-times pt-1.5 text-base mx-2 text-black;
+    @apply font-times pt-1.5 text-lg mx-2 text-black;
 }
 
 .infoBoxWL {
@@ -127,7 +127,7 @@ PersonStyle {
 }
 
 .catWL {
-    @apply w-full pt-2 pb-16 flex flex-row justify-center overflow-auto gap-2 capitalize font-times opacity-100 md:opacity-0 md:group-hover:opacity-100 text-black;
+    @apply w-full pt-2 pb-14 flex flex-row justify-center overflow-auto gap-2 capitalize font-times opacity-100 md:opacity-0 md:group-hover:opacity-100 text-black text-lg;
 }
 
 .paragraphStyle {

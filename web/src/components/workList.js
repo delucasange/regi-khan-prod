@@ -8,7 +8,6 @@ const WorkList = ({works, title}) => {
 
     return ( 
       <>
-      <h1 class="workListTitle">* { title }</h1>
       <div className="workList">
         {works.map((work) =>(
         <Link to={`/work/${work.slug.current}`}>
@@ -41,6 +40,8 @@ const WorkList = ({works, title}) => {
   </article></Link>
         ))}
       </div>  
+      <h1 class="workListTitle">* { title }</h1>
+
       </>
      );
 }
