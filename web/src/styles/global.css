@@ -58,7 +58,7 @@ p.RoleStyle {
     @apply uppercase text-xl;
 }
 
-p.PersonStyle {
+PersonStyle {
     @apply text-sm;
 }
 
@@ -76,4 +76,8 @@ p.PersonStyle {
 }
 .catWL {
     @apply w-full flex flex-row justify-center gap-2 capitalize;
+}
+
+.paragraphStyle {
+    @apply text-xs uppercase;
 }

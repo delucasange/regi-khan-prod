@@ -17,24 +17,26 @@ function BlogPost(props) {
 // publishedAt,
   } = props;
 
-
+console.log({_rawBody});
   return (
+    <>
     <article>
       <Container>
         <div>
+
           <div className="flex flex-row gap-2">
             <h1 className="">{title}</h1><p className="">for</p><p className="">{client}</p>
           </div>
+
           {videos && (  
             <div>
                {videos.map((video)=> <Video key={video.title} videoSrcURL={video.url} videoTitle={video.title} />
                )}
             </div>
           )}
-          <div className="portableText">
+
           {_rawBody && <PortableText blocks={_rawBody} />}
-          </div>
-          
+            
 
           <aside className="footerBox">
             {/* {publishedAt && (
@@ -54,9 +56,12 @@ function BlogPost(props) {
               </div>
             )}
           </aside>
+
         </div>
       </Container>
     </article>
+    </>
+
   );
 }
 //      {mainImage && mainImage.asset && (
