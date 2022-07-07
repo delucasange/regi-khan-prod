@@ -2,17 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Fonts */
+@font-face {
+    font-family: 'favorit';
+    src: url('../fonts/Favorit_Light.ttf');
+  }
+
+  @font-face {
+    font-family: 'goodsans';
+    src: url('../fonts/GoodSans-Light.otf');
+  }
+
+  @font-face {
+    font-family: 'times';
+    src: url('../fonts/TimesNow-SemiLightItalic.ttf');
+  }
+
+
+/* main header style*/
+.headerStyle {
+    @apply font-goodsans text-5xl py-4;
+}  
+
 /* Respnsive Navigation */
 .RespNavWrap {
     @apply z-40 flex md:hidden;
 }
 
 .toggleMenu {
-    @apply z-40 w-full bg-gradient-to-t from-white to-transparent text-5xl m-auto text-center pb-4 fixed inset-x-0 bottom-0 md:hidden;
+    @apply z-40 w-full bg-gradient-to-t from-white to-transparent text-5xl font-goodsans m-auto text-center pb-4 fixed inset-x-0 bottom-0 md:hidden;
 }
 
 .RespNavbar {
-    @apply z-40 absolute bg-white w-full text-5xl flex h-screen list-none capitalize; 
+    @apply z-40 absolute bg-white w-full text-5xl font-goodsans flex h-screen list-none capitalize; 
 }
 
 .RespOptions{
@@ -28,7 +51,7 @@
 }
 
 .navbar {
-    @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-white md:to-transparent pb-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl;
+    @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-white md:to-transparent pb-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
 }
 .active-link {
     @apply underline;
@@ -37,7 +60,7 @@
 /* Components */
 
 .videoStyle {
-    @apply inline w-full px-20 aspect-video;
+    @apply inline w-full px-40 bg-blue-500 aspect-video;
 }
 
 .storyStyle {
@@ -47,37 +70,68 @@
 
 
 .portableText {
-    @apply  pt-20 pb-10 w-8/12 mx-auto text-center text-3xl;
+    @apply  pt-20 pb-10 w-8/12 mx-auto text-center text-xl font-favorit;
 }
 
+.tagsTitle {
+    @apply pr-2 text-xs pt-2 font-favorit;
+}
 .categoriesPost {
-    @apply w-full justify-center flex flex-row text-3xl pb-40;
+    @apply w-full justify-center flex flex-row text-xl font-times;
 }
 
 p.RoleStyle {
-    @apply uppercase text-xl;
+    @apply uppercase text-xl font-favorit;
 }
 
 PersonStyle {
-    @apply text-sm;
+    @apply text-sm font-favorit;
 }
 
 
 /* Grid on home */
 .workList {
-    @apply grid grid-cols-3;
+    @apply grid grid-cols-1 md:grid-cols-3;
+}
+.workListTitle {
+    @apply text-sm font-goodsans py-6 pl-10 capitalize;
 }
 
 .infoBoxWL {
     @apply text-center;
 }
 .mainInfoWL {
-    @apply w-full flex flex-row justify-center gap-2;
+    @apply pt-2 w-full flex flex-row justify-center gap-2;
 }
+
+.projTitle, .projClient {
+    @apply font-favorit text-base;
+}
+.italic {
+    @apply font-times text-base;
+}
+
 .catWL {
-    @apply w-full flex flex-row justify-center gap-2 capitalize;
+    @apply w-full pb-4 flex flex-row justify-center overflow-auto gap-2 capitalize font-times;
 }
 
 .paragraphStyle {
     @apply text-xs uppercase;
+}
+
+/* Project Sheet */
+.titleBox{
+    @apply flex flex-row inline-flex;
+}
+.mainTitle, .mainClient {
+    @apply font-goodsans text-5xl;
+}
+.mainItalic {
+    @apply font-times pt-1.5 text-5xl mx-4;
+}
+
+/* Footer */
+
+.footerBox {
+    @apply pt-20 pb-10 w-full text-center font-favorit text-base;
 }

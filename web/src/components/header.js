@@ -15,7 +15,7 @@ const ComponentName = () => {
   const siteTitle = data.sanitySiteSettings.title;
 
   return (<>
-  <Link to="/"><h1 className="text-5xl">{siteTitle} {data.sanitySiteSettings.subtitle}</h1></Link>
+  <Link to="/"><h1 className="headerStyle">{siteTitle} {data.sanitySiteSettings.subtitle}</h1></Link>
   </>)
 }
 

@@ -24,8 +24,8 @@ console.log({_rawBody});
       <Container>
         <div>
 
-          <div className="flex flex-row gap-2">
-            <h1 className="">{title}</h1><p className="">for</p><p className="">{client}</p>
+          <div className="titleBox">
+          <h1><span className="mainTitle">{title}</span><span className="mainItalic">for</span><span className="mainClient">{client}</span></h1>  
           </div>
 
           {videos && (  
@@ -35,10 +35,11 @@ console.log({_rawBody});
             </div>
           )}
 
+            <div className="portableText">
           {_rawBody && <PortableText blocks={_rawBody} />}
-            
+          </div>
 
-          <aside className="footerBox">
+         
             {/* {publishedAt && (
               <div>
                 {differenceInDays(new Date(publishedAt), new Date()) > 3
@@ -48,14 +49,13 @@ console.log({_rawBody});
             )} */}
             {categories && (     
               <div className="categoriesPost">
-                <p className="pr-4">TAGS:</p> <ul>
+                <p className="tagsTitle">TAGS</p> <ul>
                   {categories.map((category) => (
                     <li key={category._id} className="capitalize">{category.title}</li>
                   ))}
                 </ul>
               </div>
             )}
-          </aside>
 
         </div>
       </Container>

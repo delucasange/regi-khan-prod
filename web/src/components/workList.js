@@ -8,7 +8,7 @@ const WorkList = ({works, title}) => {
 
     return ( 
       <>
-      <h1>{ title }</h1>
+      <h1 class="workListTitle">* { title }</h1>
       <div className="workList">
         {works.map((work) =>(
         <Link to={`/work/${work.slug.current}`}>
@@ -23,7 +23,7 @@ const WorkList = ({works, title}) => {
             />
             <div className="infoBoxWL">
             <span className="mainInfoWL">
-            <h1>{work.title}</h1><p className="italic">for</p><p>{work.client}</p>
+            <h1 className="projTitle">{work.title}</h1><p className="italic">for</p><p className="projClient">{work.client}</p>
             </span>
                 <ul className="catWL">{work.categories.map((category) => (
                     <li key={category._id}>{category.title}</li>

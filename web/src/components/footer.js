@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
     return ( <>
-        <footer>
+        <footer className="footerBox">
       <div>
         <div>
          © {new Date().getFullYear()} REGINA KHANIPOVA
