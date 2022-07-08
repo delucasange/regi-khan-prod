@@ -14,8 +14,8 @@ const WorkList = ({works, title}) => {
   <article className="group gridModule" key={work.id} >
 
             <img className="gridMImg" src={imageUrlFor(buildImageObj(work.mainImage))
-              .width(1200)
-              .height(Math.floor((9 / 16) * 1200))
+              .width(4143)
+              .height(Math.floor((3 / 4) * 4143))
               .fit("crop")
               .auto("format")
               .url()}

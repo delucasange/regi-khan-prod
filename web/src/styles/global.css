@@ -104,19 +104,21 @@ PersonStyle {
 }
 /* Grid: Title per box */
 .gridModule {
-    @apply transition-all ease-in delay-100 md:bg-pink-200 md:hover:rounded-full;
+    @apply transition-all ease-in delay-200 md:bg-pink-200 md:hover:rounded-full;
 }
+/*EDITED */
 .gridMImg {
     @apply  md:opacity-100 md:group-hover:opacity-0;
 }
 .mMargin {
-    @apply  md:-mt-48 md:pb-8 md:pt-2.5 ;
+    @apply md:-mt-72 md:pb-8 md:pt-2.5 ;
 }
+/*EDITED */
 .gridtitleBox{
-    @apply pt-2 md:-mt-2 px-28 flex flex-row justify-center text-center w-full opacity-100 md:z-40 /* md:-mt-44 md:pb-9 md:pt-0 */ md:opacity-0 md:group-hover:opacity-100;
+    @apply pt-3 md:-mt-2 px-10 md:px-28 flex flex-row justify-center text-center w-full opacity-100 md:z-40 /* md:-mt-44 md:pb-9 md:pt-0 */ md:opacity-0 md:group-hover:opacity-100;
 }
 .gridTitle, .gridClient {
-    @apply font-favorit text-lg text-black font-light;
+    @apply font-favorit text-base text-black font-light;
 }
 .gridItalic {
     @apply font-times pt-1.5 text-lg mx-2 text-black;
@@ -127,7 +129,7 @@ PersonStyle {
 }
 
 .catWL {
-    @apply w-full pt-2 pb-14 flex flex-row justify-center overflow-auto gap-2 capitalize font-times opacity-100 md:opacity-0 md:group-hover:opacity-100 text-black text-lg;
+    @apply w-full pt-2 md:pt-28 pb-10 md:pb-12 flex flex-row justify-center overflow-auto gap-2 capitalize font-times opacity-100 md:opacity-0 md:group-hover:opacity-100 text-black text-lg;
 }
 
 .paragraphStyle {
