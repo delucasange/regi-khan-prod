@@ -28,6 +28,7 @@
     "@sanity/core": "^0.139.3",
     "@sanity/ui": "^0.37.12",
     "bindings": "^1.5.0",
-    "nan": "^2.16.0"
+    "nan": "^2.16.0",
+    "sanity-plugin-dashboard-widget-netlify": "^1.2.1"
   }
 }
