@@ -46,7 +46,7 @@
 }
 
 .RespOptions{
-    @apply flex flex-col my-auto pl-10 gap-4;
+    @apply  flex flex-col my-auto pl-10 gap-4;
 }
 
 .RespClose {
@@ -67,7 +67,7 @@
 /* Components */
 
 .videoStyle {
-    @apply inline w-full px-40 aspect-video;
+    @apply inline w-full px-72 -mt-28 ;
 }
 
 .storyStyle {
@@ -76,7 +76,7 @@
 
 
 .portableText {
-    @apply  pt-20 pb-10 w-8/12 mx-auto text-center text-xl font-favorit font-light;
+    @apply  bg-emerald-100 -mt-32 pt-20 pb-10 w-8/12 mx-auto text-center text-xl font-favorit font-light;
 }
 
 .tagsTitle {
@@ -138,7 +138,7 @@ PersonStyle {
 
 /* Project Sheet */
 .titleBox{
-    @apply flex flex-row inline-flex;
+    @apply flex flex-row inline-flex bg-emerald-100 w-full justify-center pt-10;
 }
 .mainTitle, .mainClient {
     @apply font-goodsans text-5xl;
