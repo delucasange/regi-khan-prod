@@ -38,11 +38,11 @@
 }
 
 .toggleMenu {
-    @apply z-40 w-full bg-gradient-to-t from-white to-transparent text-5xl font-goodsans m-auto text-center pb-4 fixed inset-x-0 bottom-0 md:hidden;
+    @apply z-40 w-full text-5xl bg-gradient-to-t from-powder to-page font-goodsans m-auto text-center pt-4 pb-4 fixed inset-x-0 bottom-0 md:hidden;
 }
 
 .RespNavbar {
-    @apply z-40 absolute bg-white w-full text-5xl font-goodsans flex h-screen list-none capitalize; 
+    @apply z-40 absolute bg-powder w-full text-5xl font-goodsans flex h-screen list-none capitalize; 
 }
 
 .RespOptions{
@@ -58,7 +58,7 @@
 }
 
 .navbar {
-    @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-white md:to-transparent pb-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
+    @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-page md:to-powder py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
 }
 .active-link {
     @apply underline;
@@ -66,17 +66,18 @@
 
 /* Components */
 
+
 .videoStyle {
-    @apply inline w-full px-72 -mt-28 ;
+    @apply inline w-full;
 }
 
 .storyStyle {
-    @apply mt-10 mb-10 w-full aspect-[9/16];
+    @apply w-full aspect-[9/16];
 }
 
 
 .portableText {
-    @apply  bg-emerald-100 -mt-32 pt-20 pb-10 w-8/12 mx-auto text-center text-xl font-favorit font-light;
+    @apply pt-10 pb-8 w-8/12 mx-auto text-center text-xl font-favorit font-light;
 }
 
 .tagsTitle {
@@ -104,7 +105,7 @@ PersonStyle {
 }
 /* Grid: Title per box */
 .gridModule {
-    @apply transition-all ease-in delay-200 md:bg-pink-200 md:hover:rounded-full;
+    @apply transition-all ease-in delay-200 md:bg-powder md:hover:rounded-full;
 }
 /*EDITED */
 .gridMImg {
@@ -137,11 +138,28 @@ PersonStyle {
 }
 
 /* Project Sheet */
+.projectCopy {
+    @apply bg-energy pb-10 ;
+}
+
+.credits {
+    @apply font-goodsans text-xs py-4 mx-auto text-center w-full;
+}
+
+.videoCont {
+    @apply mx-0 md:mx-72 mt-0;
+}
+
+.storyCont {
+    @apply grid grid-cols-3 mx-0 md:mx-80;
+}
+
+
 .titleBox{
-    @apply flex flex-row inline-flex bg-emerald-100 w-full justify-center pt-10;
+    @apply flex flex-row inline-flex w-full mx-0 md:px-0 justify-center text-center;
 }
 .mainTitle, .mainClient {
-    @apply font-goodsans text-5xl;
+    @apply  leading-normal font-goodsans text-4xl;
 }
 .mainItalic {
     @apply font-times pt-1.5 text-5xl mx-4;
@@ -150,5 +168,5 @@ PersonStyle {
 /* Footer */
 
 .footerBox {
-    @apply pt-20 pb-10 w-full text-center font-favorit font-light text-base;
+    @apply pt-10 pb-10 w-full text-center font-favorit font-light text-base;
 }

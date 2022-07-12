@@ -2,6 +2,20 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    colors: {
+      'powder': '#FFE6FE',
+      'energy': '#D0FF71',
+      'agent': '#FFA800',
+      'pastoral': '#058B3B',
+      'page': '#FDFFE7',
+      'color1':'#DCECEF',
+      'color2':'#F7F1E5',
+      'color3':'#D2C2E3',
+      'lilac':'#D2C2E3',
+      'black':'#363635',
+      'paleorange':'#E68B3F',
+      'energy':'#E7FA05',
+    },
     borderRadius: {
       'none': '0',
       'sm': '0.125rem',
