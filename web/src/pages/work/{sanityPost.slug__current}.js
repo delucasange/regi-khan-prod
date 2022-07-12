@@ -6,6 +6,7 @@ import Layout from "../../containers/layout";
 import Container from "../../components/container";
 import Seo from "../../components/seo";
 import { toPlainText } from "../../lib/helpers";
+import Next from "../../components/next";
 
 export const query = graphql`
   query BlogPost($id: String!) {
@@ -68,6 +69,7 @@ export const query = graphql`
 const BlogPostTemplate = (props) => {
   const { data, errors } = props;
   const post = data && data.post;
+
   return (
     <Layout>
       {errors && <Seo title="GraphQL Error" />}
@@ -87,6 +89,8 @@ const BlogPostTemplate = (props) => {
       )}
 
       {post && <BlogPost {...post} />}
+
+    <Next />
     </Layout>
   );
 };

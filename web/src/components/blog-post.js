@@ -10,13 +10,14 @@ function BlogPost(props) {
   const {
     _rawBody,
     categories,
+    id,
     title,
     client,
     videos,
 //  mainImage,
 // publishedAt,
   } = props;
-
+console.log({id});
 console.log({_rawBody});
   return (
     <>
