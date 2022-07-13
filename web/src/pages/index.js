@@ -8,6 +8,7 @@ const workIndex = ({ data }) => {
     console.log(data);
     const works = data.posts.nodes;
 console.log(works);
+
 return(
 <>
 <Layout>

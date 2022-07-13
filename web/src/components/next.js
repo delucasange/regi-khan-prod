@@ -1,36 +1,35 @@
-import React from "react"
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby"
 
-const Next = ( ) => {
+const Next = ( {location} ) => {
   const data = useStaticQuery(graphql`
-  query Next ($title:String)  {
-    posts: allSanityPost(
-      sort: {fields: [publishedAt], order: DESC}
-      filter: {categories: {elemMatch: {title: {eq:$title}}}}
-    ) {
-      nodes {
-        title
-        slug {
-          current
-      }
-        id
-        categories {
-          title
+    {
+      posts: allSanityPost(sort: {fields: [publishedAt], order: DESC}, filter: {}) {
+        edges {
+          node {
+            title
+            slug {
+              current
+            }
+            id
+            categories {
+              title
+            }
+          }
         }
-        publishedAt(formatString: "MMMM Do, YYYY")
       }
     }
-  }
   `)
-  console.log(data);
-  
+
+  const list = data.posts.edges;
+  console.log({list});
+
+
   return (
-  <>
-  <pre>{JSON.stringify(data, null, 4)}
- 
-  </pre>
-  </>
-  )
+    <button> Next →</button>
+
+    );
 }
 
 export default Next
+

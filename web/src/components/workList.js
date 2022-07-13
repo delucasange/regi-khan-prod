@@ -1,18 +1,17 @@
-import { Link } from "gatsby";
 import React from "react";
+import { Link } from "gatsby";
 import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
 
 
-const WorkList = ({works, title}) => {
+const WorkList = ({works, title }) => {
 
     return ( 
       <>
       <div className="workList">
         {works.map((work) =>(
-        <Link to={`/work/${work.slug.current}`}>
-  <article className="group gridModule" key={work.id} >
-
+        <Link to={`/work/${work.slug.current}`} state={{choice: "pancakes"}}>
+  <article className="group gridModule" key={`${work.id}`}>
             <img className="gridMImg" src={imageUrlFor(buildImageObj(work.mainImage))
               .width(4143)
               .height(Math.floor((3 / 4) * 4143))
@@ -37,8 +36,10 @@ const WorkList = ({works, title}) => {
           </div>
       </div>
       
-  </article></Link>
+  </article>
+  </Link>
         ))}
+        
       </div>  
       <h1 class="workListTitle">* { title }</h1>
 

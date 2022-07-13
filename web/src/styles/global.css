@@ -60,6 +60,9 @@
 .navbar {
     @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-page py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
 }
+.navbarPost {
+    @apply hidden md:inline-flex z-40 m-auto gap-9 py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
+}
 .active-link {
     @apply underline;
 }
@@ -130,7 +133,7 @@ PersonStyle {
 }
 
 .catWL {
-    @apply w-full pt-2 md:pt-28 pb-10 md:pb-12 flex flex-row justify-center overflow-auto gap-2 capitalize font-times opacity-100 md:opacity-0 md:group-hover:opacity-100 text-black text-lg;
+    @apply w-full pt-2 md:pt-28 pb-10 md:pb-9 md:mb-0.5 flex flex-row justify-center overflow-auto gap-2 capitalize font-times opacity-100 md:opacity-0 md:group-hover:opacity-100 text-black text-lg;
 }
 
 .paragraphStyle {
@@ -139,34 +142,34 @@ PersonStyle {
 
 /* Project Sheet */
 .projectCopy {
-    @apply bg-energy pb-10 ;
+    @apply pb-10 bg-energy pt-5 ;
 }
 
 .credits {
-    @apply font-goodsans text-xs py-3 mx-auto text-center w-full;
+    @apply font-goodsans text-xs py-4 mx-auto text-center w-full;
 }
 
 .videoCont {
-    @apply mx-0 md:mx-72 mt-0;
+    @apply mx-0 md:mx-72 mt-0 md:py-5;
 }
 
 .storyCont {
-    @apply grid grid-cols-3 mx-0 md:mx-80;
+    @apply grid grid-cols-3 mx-0 md:mx-80 md:-mt-5 md:pb-5;
 }
 
 
 .titleBox{
-    @apply flex flex-row inline-flex w-full mx-0 md:px-0 md:py-4 justify-center text-center;
+    @apply flex flex-row inline-flex w-full mx-0 md:px-0 md:py-2 justify-center text-center;
 }
 .mainTitle, .mainClient {
-    @apply  leading-normal font-goodsans text-xl;
+    @apply  leading-normal font-goodsans text-3xl;
 }
 .mainItalic {
-    @apply font-times pt-1.5 text-xl mx-2;
+    @apply font-times pt-1.5 text-3xl mx-2;
 }
 
 /* Footer */
 
 .footerBox {
-    @apply pt-10 pb-10 w-full text-center font-favorit font-light text-base;
+    @apply /* pt-10 pb-10 */ w-full text-center font-favorit font-light text-base;
 }

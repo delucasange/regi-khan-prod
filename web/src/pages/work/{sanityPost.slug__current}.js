@@ -1,11 +1,11 @@
+import React from "react";
 import { graphql } from "gatsby";
 import BlogPost from "../../components/blog-post";
-import React from "react";
 import GraphQLErrorList from "../../components/graphql-error-list";
-import Layout from "../../containers/layout";
 import Container from "../../components/container";
 import Seo from "../../components/seo";
 import { toPlainText } from "../../lib/helpers";
+import PostLayout from "../../components/postLayout";
 
 export const query = graphql`
   query BlogPost($id: String!) {
@@ -70,7 +70,7 @@ const BlogPostTemplate = (props) => {
   const post = data && data.post;
 
   return (
-    <Layout>
+    <PostLayout>
       {errors && <Seo title="GraphQL Error" />}
       {post && (
         <Seo
@@ -86,11 +86,9 @@ const BlogPostTemplate = (props) => {
           <GraphQLErrorList errors={errors} />
         </Container>
       )}
-
       {post && <BlogPost {...post} />}
-
     
-    </Layout>
+    </PostLayout>
   );
 };
 

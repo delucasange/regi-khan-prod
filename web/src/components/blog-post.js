@@ -7,8 +7,10 @@ import React from "react";
 import Video from "./video";
 import Story from "./story";
 
+function BlogPost( props, {location} ) {
 
-function BlogPost(props) {
+//const choice = `${location.state.choice}`;
+
   const {
     _rawBody,
     categories,
@@ -20,17 +22,16 @@ function BlogPost(props) {
 //  mainImage,
 // publishedAt,
   } = props;
-const postId = {id};
-console.log(postId);
+
 console.log({_rawBody});
-  return (
+
+return (
     <>
     <article>
       <Container>
         <div>
-            <div className="titleBox">
-                <h1><span className="mainTitle">{title}</span><span className="mainItalic">for</span><span className="mainClient">{client}</span></h1>  
-              </div>
+  
+          
           {videos && (  
             <div className="videoCont">
                {videos.map((video)=> <Video key={video.title} videoSrcURL={video.url} videoTitle={video.title} />
@@ -45,11 +46,13 @@ console.log({_rawBody});
                )}
             </div>
           )}
-
-          <div className="projectCopy">
           <div className="credits">
               <p>CREDITS ↓</p>
           </div>
+          <div className="projectCopy">
+            <div className="titleBox">
+                <h1><span className="mainTitle">{title}</span><span className="mainItalic">for</span><span className="mainClient">{client}</span></h1>  
+              </div>
               <div className="portableText">
                 {_rawBody && <PortableText blocks={_rawBody} />}
               </div>
