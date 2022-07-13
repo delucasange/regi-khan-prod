@@ -20,7 +20,8 @@ function BlogPost(props) {
 //  mainImage,
 // publishedAt,
   } = props;
-console.log({id});
+const postId = {id};
+console.log(postId);
 console.log({_rawBody});
   return (
     <>

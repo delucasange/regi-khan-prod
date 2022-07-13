@@ -58,7 +58,7 @@
 }
 
 .navbar {
-    @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-page md:to-powder py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
+    @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-page py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
 }
 .active-link {
     @apply underline;
