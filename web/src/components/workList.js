@@ -26,7 +26,7 @@ const WorkList = ({works, title}) => {
       <div className="mMargin">
       <div className="gridtitleBox">
             <h1>
-                <span className="gridTitle">{work.title}</span><span className="gridItalic">for</span><span className="gridClient">{work.client}</span>
+                <p className="gridTitle">{work.title}</p><p className="gridItalic">for</p><p className="gridClient">{work.client}</p>
             </h1> 
         </div>
           <ul className="catWL">
