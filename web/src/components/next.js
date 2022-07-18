@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const Next = ( {location} ) => {
   const data = useStaticQuery(graphql`
@@ -26,7 +26,7 @@ const Next = ( {location} ) => {
 
 
   return (
-    <button> Next →</button>
+    <button> <Link to="/"> Next →</Link></button>
 
     );
 }
