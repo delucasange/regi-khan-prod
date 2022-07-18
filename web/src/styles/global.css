@@ -165,7 +165,7 @@ PersonStyle {
     @apply  leading-normal font-goodsans text-3xl;
 }
 .mainItalic {
-    @apply font-times pt-1.5 text-3xl mx-2;
+    @apply font-times pt-1.5 text-3xl mx-4;
 }
 
 /* Footer */

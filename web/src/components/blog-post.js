@@ -7,14 +7,13 @@ import React from "react";
 import Video from "./video";
 import Story from "./story";
 
-function BlogPost( props, {location} ) {
-
-//const choice = `${location.state.choice}`;
+function BlogPost( props ) {
 
   const {
     _rawBody,
     categories,
     id,
+    slug,
     title,
     client,
     videos,
@@ -23,7 +22,8 @@ function BlogPost( props, {location} ) {
 // publishedAt,
   } = props;
 
-console.log({_rawBody});
+const currentSlug = slug.current;
+console.log(currentSlug);
 
 return (
     <>

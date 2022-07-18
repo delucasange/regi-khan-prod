@@ -10,6 +10,7 @@ const PostNav = ( ) => {
     return ( <>
       <div className="navbarPost">
       <Back />
+      <p></p>
       <Next />
       </div>
     </> 

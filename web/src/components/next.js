@@ -1,32 +1,36 @@
-import React from "react";
+import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-const Next = ( {location} ) => {
+const Next = ( ) => {
   const data = useStaticQuery(graphql`
     {
       posts: allSanityPost(sort: {fields: [publishedAt], order: DESC}, filter: {}) {
-        edges {
-          node {
+        nodes {
+          title
+          slug {
+            current
+          }
+          id
+          categories {
             title
-            slug {
-              current
-            }
-            id
-            categories {
-              title
-            }
           }
         }
       }
     }
   `)
 
-  const list = data.posts.edges;
-  console.log({list});
+const list = data.posts.nodes;
+const allPosts = list.map((node) => node.slug.current );
+const nextIndex = allPosts.indexOf('hp-introducing-mfj-d-printer-poker-test') + 1;
+const nextUrl = list[`${nextIndex}`].slug.current;
+console.log(allPosts);
+console.log(nextIndex);
+console.log(nextUrl);
 
 
   return (
-    <button> <Link to="/"> Next →</Link></button>
+
+    <Link to={`/work/${nextUrl}`}> Next →</Link>
 
     );
 }

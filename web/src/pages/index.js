@@ -5,9 +5,7 @@ import Seo from "../components/seo";
 import WorkList from "../components/workList";
 
 const workIndex = ({ data }) => {
-    console.log(data);
-    const works = data.posts.nodes;
-console.log(works);
+const works = data.posts.nodes;
 
 return(
 <>
