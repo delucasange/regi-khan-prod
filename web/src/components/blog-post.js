@@ -7,6 +7,7 @@ import React from "react";
 import Video from "./video";
 import Story from "./story";
 
+
 function BlogPost( props ) {
 
   const {

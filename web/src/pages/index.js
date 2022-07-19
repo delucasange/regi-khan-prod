@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo";
 import WorkList from "../components/workList";
@@ -11,9 +11,9 @@ return(
 <>
 <Layout>
 <Seo title="Index" description={data.subtitle} />
+<Link to="test" state={{choice: "fluff"}}>Test Link</Link>
 
 <WorkList works={works} title="All Works"/>
-
 </Layout>
 </>
 );

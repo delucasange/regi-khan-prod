@@ -6,6 +6,8 @@ import Container from "../../components/container";
 import Seo from "../../components/seo";
 import { toPlainText } from "../../lib/helpers";
 import PostLayout from "../../components/postLayout";
+import Next from '../../components/next';
+import Back from '../../components/back';
 
 export const query = graphql`
   query BlogPost($id: String!) {
@@ -65,12 +67,20 @@ export const query = graphql`
     }
   }
 `;
-const BlogPostTemplate = (props) => {
+const BlogPostTemplate = ( props )  => {
+
   const { data, errors } = props;
   const post = data && data.post;
 
+  //const current = data.post.slug.current;
+  console.log(data.post.slug.current);
+
   return (
     <PostLayout>
+    <div className="navbarPost">
+    <Back />
+    <Next currentUrl={data.post.slug.current} />
+    </div>
       {errors && <Seo title="GraphQL Error" />}
       {post && (
         <Seo
@@ -82,12 +92,11 @@ const BlogPostTemplate = (props) => {
 
       {errors && (
         <Container>
-            
           <GraphQLErrorList errors={errors} />
         </Container>
-      )}
+      )} 
       {post && <BlogPost {...post} />}
-    
+      
     </PostLayout>
   );
 };

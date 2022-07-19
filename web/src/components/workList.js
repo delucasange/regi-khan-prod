@@ -6,13 +6,12 @@ import { imageUrlFor } from "../lib/image-url"
 
 const WorkList = ({ works, title }) => {
 
-
     return ( 
       <>
       <div className="workList">
         {works.map((work) =>(
   <article className="group gridModule" key={work.id}>
-            <Link to={`/work/${work.slug.current}`} state={{ slug: `${work.slug.current}` }}>
+            <Link to={`/work/${work.slug.current}`}>
             <img className="gridMImg" src={imageUrlFor(buildImageObj(work.mainImage))
               .width(4143)
               .height(Math.floor((3 / 4) * 4143))
