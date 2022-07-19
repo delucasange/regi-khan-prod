@@ -11,7 +11,6 @@ return(
 <>
 <Layout>
 <Seo title="Index" description={data.subtitle} />
-<Link to="test" state={{choice: "fluff"}}>Test Link</Link>
 
 <WorkList works={works} title="All Works"/>
 </Layout>

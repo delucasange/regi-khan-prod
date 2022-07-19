@@ -73,7 +73,7 @@ const BlogPostTemplate = ( props )  => {
   const post = data && data.post;
 
   //const current = data.post.slug.current;
-  console.log(data.post.slug.current);
+  // console.log(data.post.slug.current);
 
   return (
     <PostLayout>
