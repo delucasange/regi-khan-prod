@@ -15,7 +15,11 @@ const ComponentName = () => {
   const siteTitle = data.sanitySiteSettings.title;
 
   return (<>
-  <Link to="/"><h1 className="headerStyle">{siteTitle} {data.sanitySiteSettings.subtitle}</h1></Link>
+  <div className="z-40 absolute">
+  <Link to="/">
+    <h1 className="headerStyle">{siteTitle} {data.sanitySiteSettings.subtitle}</h1>
+    </Link>
+  </div>
   </>)
 }
 
