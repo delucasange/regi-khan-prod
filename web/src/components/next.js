@@ -33,7 +33,7 @@ let topNumber = allPosts.length - 1;
 let next = 0;
 if (currentIndex === 0 ) {
   next = 1
-} if (currentIndex < topNumber - 1) {
+} if (currentIndex < topNumber) {
   next = currentIndex + 1
 } else {
   next = 0

@@ -13,7 +13,7 @@ function BlogPost( props ) {
   const {
     _rawBody,
     categories,
-    id,
+    // id,
     slug,
     title,
     client,
@@ -30,6 +30,9 @@ return (
     <>
     <article>
       <Container>
+              <div className="titleBox">
+                <h1><span className="mainTitle">{title}</span><span className="mainItalic">for</span><span className="mainClient">{client}</span></h1>  
+              </div>
         <div>
   
           
@@ -47,13 +50,10 @@ return (
                )}
             </div>
           )}
-          <div className="credits">
+          {/* <div className="credits">
               <p>CREDITS ↓</p>
-          </div>
+          </div> */}
           <div className="projectCopy">
-            <div className="titleBox">
-                <h1><span className="mainTitle">{title}</span><span className="mainItalic">for</span><span className="mainClient">{client}</span></h1>  
-              </div>
               {mainImage && mainImage.asset && (
                 <div>
                   <img

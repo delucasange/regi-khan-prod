@@ -17,8 +17,7 @@ const PortableText = ({blocks}) => (
   <BasePortableText
     value={blocks}
     components={components}
-    {...clientConfig.sanity}
-  />
+    {...clientConfig.sanity} />
 );
 
 export default PortableText;
