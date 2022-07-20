@@ -7,6 +7,8 @@ import WorkList from "../components/workList";
 const workIndex = ({ data }) => {
 const works = data.posts.nodes;
 
+console.log(works);
+
 return(
 <>
 <Layout>

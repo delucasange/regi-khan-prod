@@ -8,6 +8,8 @@ import { toPlainText } from "../../lib/helpers";
 import PostLayout from "../../components/postLayout";
 import Next from '../../components/next';
 import Back from '../../components/back';
+// import { buildImageObj } from "../../lib/helpers";
+// import { imageUrlFor } from "../../lib/image-url";
 
 export const query = graphql`
   query BlogPost($id: String!) {

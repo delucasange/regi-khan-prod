@@ -7,13 +7,10 @@ import WorkList from "../../components/workList";
 
 const CategoryPage = ({ data, location }) => {
 const works = data.posts.nodes;
-console.log(data);
-
+// console.log(data);
 const { state = {} } = location;
-
 const { category } = state;
-
-console.log(category);
+// console.log(category);
 
 return (
 <>

@@ -2,8 +2,8 @@
 import Container from "./container";
 import PortableText from "./portableText";
 import React from "react";
-//import { buildImageObj } from "../lib/helpers";
-//import { imageUrlFor } from "../lib/image-url";
+import { buildImageObj } from "../lib/helpers";
+import { imageUrlFor } from "../lib/image-url";
 import Video from "./video";
 import Story from "./story";
 
@@ -19,12 +19,12 @@ function BlogPost( props ) {
     client,
     videos,
     stories,
-//  mainImage,
+    mainImage,
 // publishedAt,
   } = props;
 
 const currentSlug = slug.current;
-console.log(currentSlug);
+// console.log(currentSlug);
 
 return (
     <>
@@ -54,6 +54,19 @@ return (
             <div className="titleBox">
                 <h1><span className="mainTitle">{title}</span><span className="mainItalic">for</span><span className="mainClient">{client}</span></h1>  
               </div>
+              {mainImage && mainImage.asset && (
+                <div>
+                  <img
+                    src={imageUrlFor(buildImageObj(mainImage))
+                      .width(1200)
+                      .height(Math.floor((9 / 16) * 1200))
+                      .fit("crop")
+                      .auto("format")
+                      .url()}
+                    alt={mainImage.alt}
+                  />
+                </div>
+              )}
               <div className="portableText">
                 {_rawBody && <PortableText blocks={_rawBody} />}
               </div>

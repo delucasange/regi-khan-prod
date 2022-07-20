@@ -14,7 +14,7 @@ const Pages = ({ data }) => {
 
     const Bio = data.sanityPages._rawBio;
 
-    console.log(Bio);
+    // console.log(Bio);
 
     return ( 
         <>
