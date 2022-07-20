@@ -32,11 +32,12 @@ console.log(_rawBody);
 
 return (
     <>
+    <div className="titleBox">
+                <h1><span className="mainTitle">{title}</span><span className="mainItalic">for</span><span className="mainClient">{client}</span></h1>  
+    </div>
     <article>
       <Container>
-              <div className="titleBox">
-                <h1><span className="mainTitle">{title}</span><span className="mainItalic">for</span><span className="mainClient">{client}</span></h1>  
-              </div>
+              
         <div>
   
           
