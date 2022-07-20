@@ -19,7 +19,7 @@
   }
 
   @font-face {
-    font-family: 'mainfont';
+    font-family: 'goodsans';
     src: url('../fonts/DMsans-Regular.ttf');
   }
 
@@ -38,7 +38,7 @@
 
 /* main header style*/
 .headerStyle {
-    @apply font-mainfont text-5xl pt-2 pb-4;
+    @apply font-goodsans text-5xl pt-2 pb-4;
 }  
 
 /* Respnsive Navigation */
@@ -47,11 +47,11 @@
 }
 
 .toggleMenu {
-    @apply z-40 w-full text-5xl bg-gradient-to-t from-white font-mainfont m-auto text-center pt-4 pb-4 fixed inset-x-0 bottom-0 md:hidden;
+    @apply z-40 w-full text-5xl bg-gradient-to-t from-white font-goodsans m-auto text-center pt-4 pb-4 fixed inset-x-0 bottom-0 md:hidden;
 }
 
 .RespNavbar {
-    @apply z-40 absolute bg-white w-full text-5xl font-mainfont flex h-screen list-none capitalize; 
+    @apply z-40 absolute bg-white w-full text-5xl font-goodsans flex h-screen list-none capitalize; 
 }
 
 .RespOptions{
@@ -67,10 +67,10 @@
 }
 
 .navbar {
-    @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-white py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-mainfont;
+    @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-white py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
 }
 .navbarPost {
-    @apply hidden md:inline-flex z-40 m-auto gap-9 py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-mainfont;
+    @apply hidden md:inline-flex z-40 m-auto gap-9 py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
 }
 .active-link {
     @apply underline;
@@ -109,7 +109,7 @@ PersonStyle {
     @apply grid grid-cols-1 md:px-10 md:pt-24 md:grid-cols-3;
 }
 .workListTitle {
-    @apply text-sm font-mainfont py-6 pl-10 capitalize;
+    @apply text-sm font-goodsans py-6 pl-10 capitalize;
 }
 /* Grid: Title per box */
 .gridModule {
@@ -151,7 +151,7 @@ PersonStyle {
 }
 
 .credits {
-    @apply font-mainfont text-xs py-4 mx-auto text-center w-full;
+    @apply font-goodsans text-xs py-4 mx-auto text-center w-full;
 }
 
 .videoCont {
@@ -167,10 +167,10 @@ PersonStyle {
     @apply flex flex-row inline-flex w-full mx-0 md:px-0 md:mt-20 md:py-2 justify-center text-center;
 }
 .mainTitle, .mainClient {
-    @apply  leading-normal font-mainfont text-5xl;
+    @apply  leading-normal font-goodsans text-5xl;
 }
 .mainItalic {
-    @apply font-mainfont pt-1.5 text-5xl mx-4;
+    @apply font-goodsans pt-1.5 text-5xl mx-4;
 }
 
 /* Footer */
