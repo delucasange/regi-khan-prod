@@ -4,9 +4,9 @@ const Footer = () => {
     return ( <>
         <footer className="footerBox">
       <div>
-        {/* <div>
+        <div>
          © {new Date().getFullYear()} REGINA KHANIPOVA
-        </div> */}
+        </div>
       </div>
     </footer>
     </>

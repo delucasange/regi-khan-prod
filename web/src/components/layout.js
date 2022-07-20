@@ -11,7 +11,6 @@ const Layout = ({ children, siteTitle }) => (
     <RespNav />
   
     <div className="z-0">{children}</div>
-    <Footer />
   </>
 );
 
