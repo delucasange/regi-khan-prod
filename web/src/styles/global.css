@@ -183,3 +183,29 @@ PersonStyle {
 .portableText a {
  @apply underline;
 }
+/* About Page */
+
+.PageCont {
+    @apply m-auto px-40 my-52 font-favorit;
+}
+.PageBio a{
+    @apply underline;
+}
+
+.PageCont p::before {
+    content: "  ";
+    white-space: pre;
+}
+
+.BioPortableText {
+    @apply py-5 mx-auto text-left text-base font-favorit font-light;
+}
+
+.BioPortableText p::before {
+    content: " ";
+    white-space: pre;
+}
+
+.BioPortableText a {
+ @apply underline;
+}

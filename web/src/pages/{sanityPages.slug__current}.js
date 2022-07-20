@@ -1,15 +1,20 @@
 import { graphql } from "gatsby";
 import React from "react";
+import BioPortableText from "../components/bioPortableText";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { buildImageObj } from "../lib/helpers"
-import { imageUrlFor } from "../lib/image-url"
+// import { buildImageObj } from "../lib/helpers"
+// import { imageUrlFor } from "../lib/image-url"
 
 const Pages = ({ data }) => {
 
     console.log(data); 
     const pageTitle = data.sanityPages.name;
     const pageImageUrl = data.sanityPages.image.asset.url;
+
+    const Bio = data.sanityPages._rawBio;
+
+    console.log(Bio);
 
     return ( 
         <>
@@ -21,9 +26,11 @@ const Pages = ({ data }) => {
       <img className="m-auto my-28" src={pageImageUrl} alt={data.sanityPages.image.alt}/>
       </div>
       <div className="w-6/12 container">
-        <div className="m-auto px-40 my-52 font-favorit">
+        <div className="PageCont">
           <h1>{pageTitle}</h1>
-          <p className="">{data.sanityPages.bio[0].children[0].text}</p>
+          <div className="BioPortableText">
+                {Bio && <BioPortableText blocks={Bio} />}
+              </div>
         </div>
       </div>
    </div>
@@ -40,11 +47,7 @@ query MyQuery($id: String) {
     description
     name
     id
-    bio {
-      children {
-        text
-      }
-    }
+    _rawBio
     image {
       asset {
         _type
