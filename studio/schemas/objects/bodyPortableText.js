@@ -1,13 +1,3 @@
-import React from 'react'
-
-// const Role = props => (
-//   <span className="roleStyle">{props.children}</span>
-// );
-
-// const Person = props => (
-//   <span className="personStyle">{props.children}</span>
-// );
-
 export default {
   name: "bodyPortableText",
   type: "array",
@@ -65,9 +55,6 @@ export default {
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
-    {
-      type:"pause",
-    },
     {
       type: "mainImage",
       options: { hotspot: true },

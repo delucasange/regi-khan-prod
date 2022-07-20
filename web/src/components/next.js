@@ -45,7 +45,7 @@ const nextUrl = list[`${next}`].slug.current;
 
   return (
 <>
-  <div onKeyPress="37"><Link from={currentUrl} to={`/work/${nextUrl}`}> Next →</Link></div>
+  <Link from={currentUrl} to={`/work/${nextUrl}`}> Next →</Link>
   </>
     );
 }

@@ -21,7 +21,6 @@ import mainImage from "./objects/mainImage";
 import authorReference from "./objects/authorReference";
 import videoReference from "./objects/videoReference";
 import storyReference from "./objects/storyReference";
-import pause from "./objects/pause";
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -47,7 +46,6 @@ export default createSchema({
     bodyPortableText,
     bioPortableText,
     excerptPortableText,
-    pause,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ]),
