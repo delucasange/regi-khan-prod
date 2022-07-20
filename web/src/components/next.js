@@ -42,9 +42,10 @@ if (currentIndex === 0 ) {
 //get the slug of the index of next post
 const nextUrl = list[`${next}`].slug.current;
 // console.log(nextUrl);
+
   return (
 <>
-  <Link from={currentUrl} to={`/work/${nextUrl}`}> Next →</Link>
+  <div onKeyPress="37"><Link from={currentUrl} to={`/work/${nextUrl}`}> Next →</Link></div>
   </>
     );
 }

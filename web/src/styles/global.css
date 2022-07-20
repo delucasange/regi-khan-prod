@@ -79,10 +79,6 @@
 }
 
 
-.portableText {
-    @apply py-5 w-8/12 mx-auto text-center text-xl font-favorit font-light;
-}
-
 .tagsTitle {
     @apply pr-2 text-xs pt-2 font-favorit font-light;
 }
@@ -172,4 +168,18 @@ PersonStyle {
 
 .footerBox {
     @apply /* pt-10 pb-10 */ w-full text-center font-favorit font-light text-base;
+}
+
+
+.portableText {
+    @apply py-5 w-8/12 mx-auto text-center text-xl font-favorit font-light;
+}
+
+.portableText p::before {
+    content: " ";
+    white-space: pre;
+}
+
+.portableText a {
+ @apply underline;
 }
