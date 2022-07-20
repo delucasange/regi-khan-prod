@@ -2,8 +2,8 @@
 import Container from "./container";
 import PortableText from "./portableText";
 import React from "react";
-import { buildImageObj } from "../lib/helpers";
-import { imageUrlFor } from "../lib/image-url";
+// import { buildImageObj } from "../lib/helpers";
+// import { imageUrlFor } from "../lib/image-url";
 import Video from "./video";
 import Story from "./story";
 
@@ -19,12 +19,16 @@ function BlogPost( props ) {
     client,
     videos,
     stories,
-    mainImage,
+    serializers,
+    // mainImage,
 // publishedAt,
   } = props;
 
 const currentSlug = slug.current;
 // console.log(currentSlug);
+
+console.log(_rawBody);
+
 
 return (
     <>
@@ -54,7 +58,7 @@ return (
               <p>CREDITS ↓</p>
           </div> */}
           <div className="projectCopy">
-              {mainImage && mainImage.asset && (
+              {/* {mainImage && mainImage.asset && (
                 <div>
                   <img
                     src={imageUrlFor(buildImageObj(mainImage))
@@ -66,9 +70,9 @@ return (
                     alt={mainImage.alt}
                   />
                 </div>
-              )}
+              )} */}
               <div className="portableText">
-                {_rawBody && <PortableText blocks={_rawBody} />}
+                {_rawBody && <PortableText blocks={_rawBody} serializers={serializers} />}
               </div>
                     {/* {publishedAt && (
                       <div>

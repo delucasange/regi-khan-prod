@@ -12,11 +12,23 @@ const components = {
     },
   };
 
+  const serializers = {
+    marksDefs: {
+      link: ({mark, children}) => {
+        // Read https://css-tricks.com/use-target_blank/
+        const { blank, href } = mark
+        return blank ?
+          <a href={href} target="_blank" rel="noopener">{children}</a>
+          : <a href={href}>{children}</a>
+      },
+    },
+  };
 
-const PortableText = ({blocks}) => (
+const PortableText = ({blocks} ) => (
   <BasePortableText
     value={blocks}
     components={components}
+    serializers={serializers} 
     {...clientConfig.sanity} />
 );
 

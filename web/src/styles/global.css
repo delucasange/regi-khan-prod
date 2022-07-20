@@ -138,7 +138,7 @@ PersonStyle {
 
 /* Project Sheet */
 .projectCopy {
-    @apply pb-10 bg-energy pt-5 ;
+    @apply pb-10 pt-5 ;
 }
 
 .credits {

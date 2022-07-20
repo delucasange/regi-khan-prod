@@ -58,11 +58,11 @@ export default () =>
         .icon(MdDescription)
         .schemaType("post")
         .child(S.documentTypeList("post").title("Blog posts")),
-      S.listItem()
-        .title("Authors")
-        .icon(MdPerson)
-        .schemaType("author")
-        .child(S.documentTypeList("author").title("Authors")),
+      // S.listItem()
+      //   .title("Authors")
+      //   .icon(MdPerson)
+      //   .schemaType("author")
+      //   .child(S.documentTypeList("author").title("Authors")),
       S.listItem()
         .title("Categories")
         .icon(MdLocalOffer)
