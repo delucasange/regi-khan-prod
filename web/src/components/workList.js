@@ -24,9 +24,13 @@ const WorkList = ({ works, title }) => {
          <div>
       <div className="mMargin">
       <div className="gridtitleBox">
-            <h1>
-                <p className="gridTitle">{work.title}</p><p className="gridItalic">for</p><p className="gridClient">{work.client}</p>
-            </h1> 
+        <h1>
+          <p>
+            <span className="gridTitle">{work.title}</span>
+            <span className="gridItalic">for</span>
+            <span className="gridClient">{work.client}</span>
+          </p>
+        </h1> 
         </div>
           <ul className="catWL">
             {work.categories.map((category) => (
@@ -41,7 +45,7 @@ const WorkList = ({ works, title }) => {
         ))}
         
       </div>  
-      <h1 class="workListTitle">* { title }</h1>
+      {/* <h1 class="workListTitle">* { title }</h1> */}
 
       </>
      );

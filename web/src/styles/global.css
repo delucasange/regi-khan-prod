@@ -38,20 +38,20 @@
 
 /* main header style*/
 .headerStyle {
-    @apply font-goodsans text-5xl pt-2 pb-4;
+    @apply  fixed lg:relative flex overflow-x-hidden font-goodsans text-5xl pt-2 pb-4;
 }  
 
 /* Respnsive Navigation */
 .RespNavWrap {
-    @apply z-40 flex md:hidden;
+    @apply bg-energy z-40 flex lg:hidden;
 }
 
 .toggleMenu {
-    @apply z-40 w-full text-5xl bg-gradient-to-t from-white font-goodsans m-auto text-center pt-4 pb-4 fixed inset-x-0 bottom-0 md:hidden;
+    @apply z-10 w-full text-5xl bg-gradient-to-t from-white font-goodsans m-auto text-center pt-4 pb-4 fixed inset-x-0 bottom-0 lg:hidden;
 }
 
 .RespNavbar {
-    @apply z-40 absolute bg-white w-full text-5xl font-goodsans flex h-screen list-none capitalize; 
+    @apply z-20 fixed bg-white w-full text-5xl font-goodsans flex h-screen list-none capitalize; 
 }
 
 .RespOptions{
@@ -59,7 +59,7 @@
 }
 
 .RespClose {
-    @apply fixed bottom-0 z-40 w-full text-center pb-4 text-5xl md:hidden;
+    @apply fixed bottom-0 z-40 w-full text-center pb-4 text-5xl lg:hidden;
 }
 /* Desktop Navigation */
 .navWrap {
@@ -67,11 +67,16 @@
 }
 
 .navbar {
-    @apply hidden md:inline-flex z-40 m-auto gap-9 md:bg-gradient-to-t md:from-white py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
+    @apply hidden z-40 m-auto justify-between list-none capitalize  lg:px-4 lg:pb-2 lg:inline-flex lg:bg-gradient-to-t lg:from-white  lg:fixed lg:inset-x-0 lg:bottom-0 /* w-full mx-0 */ lg:flex-row  lg:text-[calc(100%*2.6)] 2xl:text-5xl font-goodsans;
 }
+
 .navbarPost {
-    @apply hidden md:inline-flex z-40 m-auto gap-9 py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
+    @apply z-40 m-auto justify-between list-none capitalize  md:px-4 pb-2 inline-flex bg-gradient-to-t from-white  fixed inset-x-0 bottom-0 w-full mx-0 lg:flex-row /* lg:text-[calc(100%*2.6)] */ text-5xl font-goodsans;
 }
+
+/* .navbarPost {
+    @apply hidden md:inline-flex z-40 m-auto gap-9 py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
+} */
 .active-link {
     @apply underline;
 }
@@ -106,31 +111,31 @@ PersonStyle {
 
 /* Work List Grid on home */
 .workList {
-    @apply grid grid-cols-1 md:px-10 md:pt-24 md:grid-cols-3;
+    @apply grid grid-cols-1 py-16 md:px-10 sm:py-44 md:py-24 lg:grid-cols-2 2xl:grid-cols-3;
 }
 .workListTitle {
-    @apply text-sm font-goodsans py-6 pl-10 capitalize;
+    @apply text-sm sm:text-lg font-goodsans py-6 pl-10 capitalize;
 }
 /* Grid: Title per box */
 .gridModule {
-    @apply transition-all ease-in delay-200 md:bg-powder md:hover:rounded-full;
+    @apply transition-all ease-in delay-200 2xl:bg-powder 2xl:hover:rounded-full;
 }
 /*EDITED */
 .gridMImg {
-    @apply  md:opacity-100 md:group-hover:opacity-0;
+    @apply  md:opacity-100 2xl:group-hover:opacity-0;
 }
 .mMargin {
-    @apply md:-mt-72 md:pb-8 md:pt-2.5 ;
+    @apply 2xl:-mt-72 2xl:pb-8 2xl:pt-[calc((100%-98.15%))] ;
 }
 /*EDITED */
 .gridtitleBox{
-    @apply /* pt-3 md:-mt-2 px-10 md:px-28 text-center w-full */ mt-2 md:-mt-4 w-full text-center opacity-100 md:z-40 md:opacity-0 md:group-hover:opacity-100;
+    @apply  mt-3 w-full text-center opacity-100 2xl:-mt-[calc(100%-95.45%)] 2xl:z-40 2xl:opacity-0 2xl:group-hover:opacity-100;
 }
 .gridTitle, .gridClient {
-    @apply font-favorit text-base text-black md:text-black font-light;
+    @apply font-favorit text-base sm:text-lg text-black md:text-black font-light;
 }
 .gridItalic {
-    @apply font-times text-center py-1 text-lg mx-2 text-black md:text-black;
+    @apply font-times text-center py-1 text-lg mx-2 text-black md:text-black 2xl:block;
 }
 
 .infoBoxWL {
@@ -138,7 +143,7 @@ PersonStyle {
 }
 
 .catWL {
-    @apply w-full pt-2 md:pt-28 pb-10 md:pb-9 md:mb-0.5 flex flex-row justify-center overflow-auto gap-2 capitalize font-times opacity-100 md:opacity-0 md:group-hover:opacity-100 text-black text-lg;
+    @apply w-full pt-2 pb-10 md:pb-9 md:mb-0.5 flex flex-row justify-center overflow-auto gap-2 capitalize font-times opacity-100 2xl:pt-28 2xl:opacity-0 2xl:group-hover:opacity-100 text-black text-lg;
 }
 
 .paragraphStyle {
@@ -155,11 +160,11 @@ PersonStyle {
 }
 
 .videoCont {
-    @apply mx-0 md:mx-72 mt-0 md:py-5;
+    @apply mx-3 md:mx-20 lg:mx-32 xl:mx-56 2xl:mx-72 mt-0 md:py-5;
 }
 
 .storyCont {
-    @apply grid grid-cols-3 mx-0 md:mx-80 md:-mt-5 md:pb-5;
+    @apply px-8 md:grid md:grid-cols-3 mx-0 md:mx-10 lg:mx-20 xl:mx-52 2xl:mx-80 md:-mt-5 md:pb-5;
 }
 
 
@@ -181,7 +186,7 @@ PersonStyle {
 
 
 .portableText {
-    @apply py-5 w-8/12 mx-auto text-center text-xl font-favorit font-light;
+    @apply py-5 w-[calc(100%-2em)] lg:w-8/12 mx-auto text-center text-xl font-favorit font-light;
 }
 
 .portableText p::before {

@@ -73,7 +73,8 @@ return (
                 </div>
               )} */}
               <div className="portableText">
-                {_rawBody && <PortableText blocks={_rawBody} serializers={serializers} />}
+                {_rawBody && <PortableText blocks={_rawBody} 
+                /*serializers={serializers}*/ />}
               </div>
                     {/* {publishedAt && (
                       <div>
