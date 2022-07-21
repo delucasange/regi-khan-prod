@@ -18,12 +18,12 @@ const Next = ( {currentUrl} ) => {
       }
     }
   `)
-// console.log(`${currentUrl}`);
 const list = data.posts.nodes;
 // map all posts with list map
 const allPosts = list.map((node) => node.slug.current );
 // console.log(allPosts);
 // find the index of the current url but we convert it to a positive interger
+// console.log(`${currentUrl}`);
 let currentIndex = Math.abs(allPosts.indexOf(`${currentUrl}`));
 // console.log(currentIndex);
 // the total array counts number 0 so we have to have a minus 

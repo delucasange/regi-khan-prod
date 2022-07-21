@@ -19,15 +19,15 @@ function BlogPost( props ) {
     client,
     videos,
     stories,
-    serializers,
+    // serializers,
     // mainImage,
 // publishedAt,
   } = props;
 
 const currentSlug = slug.current;
-// console.log(currentSlug);
+console.log(currentSlug);
 
-console.log(_rawBody);
+// console.log(_rawBody);
 
 
 return (
@@ -101,18 +101,5 @@ return (
 
   );
 }
-//      {mainImage && mainImage.asset && (
-//  <div>
-//  <img
-//    src={imageUrlFor(buildImageObj(mainImage))
-//      .width(1200)
-//      .height(Math.floor((9 / 16) * 1200))
-//      .fit("crop")
-//      .auto("format")
-//     .url()}
-//    alt={mainImage.alt}
-//  />
-//</div>
-//)}
 
 export default BlogPost;
