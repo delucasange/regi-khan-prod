@@ -4,7 +4,7 @@ import { buildImageObj } from "../lib/helpers"
 import { imageUrlFor } from "../lib/image-url"
 
 
-const WorkList = ({ works, title }) => {
+const WorkList = ({ works }) => {
 
     return ( 
       <>
