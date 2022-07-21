@@ -9,13 +9,13 @@
     src: url('../fonts/Favorit_Light.ttf');
   } */
   @font-face {
-    font-family: 'favorit';
-    src: url('../fonts/Favorit_Light.ttf');
+    font-family: 'light';
+    src: url('../fonts/Folio-Light.otf');
   }
 
   @font-face {
-    font-family: 'goodsans';
-    src: url('../fonts/DMSans-Regular.ttf');
+    font-family: 'folio';
+    src: url('../fonts/Folio-Light.otf');
   }
 
   @font-face {
@@ -33,20 +33,20 @@
 
 /* main header style*/
 .headerStyle {
-    @apply  fixed lg:relative flex overflow-x-hidden font-goodsans text-5xl pt-2 pb-4;
+    @apply  fixed lg:relative flex overflow-x-hidden font-folio text-black text-5xl pt-2 pb-4;
 }  
 
 /* Respnsive Navigation */
 .RespNavWrap {
-    @apply bg-energy z-40 flex lg:hidden;
+    @apply z-40 flex lg:hidden;
 }
 
 .toggleMenu {
-    @apply z-10 w-full text-5xl bg-gradient-to-t from-white font-goodsans m-auto text-center pt-4 pb-4 fixed inset-x-0 bottom-0 lg:hidden;
+    @apply z-10 w-full text-5xl bg-gradient-to-t from-white font-folio text-black m-auto text-center pt-4 pb-4 fixed inset-x-0 bottom-0 lg:hidden;
 }
 
 .RespNavbar {
-    @apply z-20 fixed bg-white w-full text-5xl font-goodsans flex h-screen list-none capitalize; 
+    @apply z-20 fixed bg-white w-full text-5xl font-folio text-black flex h-screen list-none capitalize; 
 }
 
 .RespOptions{
@@ -62,15 +62,15 @@
 }
 
 .navbar {
-    @apply hidden z-40 m-auto justify-between list-none capitalize  lg:px-4 lg:pb-2 lg:inline-flex lg:bg-gradient-to-t lg:from-white  lg:fixed lg:inset-x-0 lg:bottom-0 /* w-full mx-0 */ lg:flex-row  lg:text-[calc(100%*2.6)] 2xl:text-5xl font-goodsans;
+    @apply hidden z-40 m-auto justify-between list-none capitalize  text-black lg:px-4 lg:pb-2 lg:inline-flex lg:bg-gradient-to-t lg:from-white  lg:fixed lg:inset-x-0 lg:bottom-0 /* w-full mx-0 */ lg:flex-row  lg:text-[calc(100%*2.6)] 2xl:text-5xl font-folio;
 }
 
 .navbarPost {
-    @apply z-40 m-auto justify-between list-none capitalize  md:px-4 pb-2 inline-flex bg-gradient-to-t from-white  fixed inset-x-0 bottom-0 w-full mx-0 lg:flex-row /* lg:text-[calc(100%*2.6)] */ text-5xl font-goodsans;
+    @apply z-40 m-auto justify-between list-none capitalize  md:px-4 pb-2 inline-flex bg-gradient-to-t from-white  fixed inset-x-0 bottom-0 w-full mx-0 lg:flex-row /* lg:text-[calc(100%*2.6)] */ text-5xl font-folio text-black;
 }
 
 /* .navbarPost {
-    @apply hidden md:inline-flex z-40 m-auto gap-9 py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-goodsans;
+    @apply hidden md:inline-flex z-40 m-auto gap-9 py-4 md:fixed md:inset-x-0 md:bottom-0 w-full mx-0 px-4 md:flex-row justify-between list-none capitalize text-5xl font-folio;
 } */
 .active-link {
     @apply underline;
@@ -89,18 +89,18 @@
 
 
 .tagsTitle {
-    @apply pr-2 text-xs pt-2 font-favorit font-light;
+    @apply pr-2 text-xs pt-2 font-light font-light;
 }
 .categoriesPost {
     @apply w-full justify-center flex flex-row text-xl font-times;
 }
 
 p.RoleStyle {
-    @apply uppercase text-xl font-favorit font-light;
+    @apply uppercase text-xl font-light font-light;
 }
 
 PersonStyle {
-    @apply text-sm font-favorit font-light;
+    @apply text-sm font-light font-light;
 }
 
 
@@ -109,7 +109,7 @@ PersonStyle {
     @apply grid grid-cols-1 py-16 md:px-10 sm:py-44 md:py-24 lg:grid-cols-2 2xl:grid-cols-3;
 }
 .workListTitle {
-    @apply text-sm sm:text-lg font-goodsans py-6 pl-10 capitalize;
+    @apply text-sm sm:text-lg font-folio text-black py-6 pl-10 capitalize;
 }
 /* Grid: Title per box */
 .gridModule {
@@ -127,7 +127,7 @@ PersonStyle {
     @apply  mt-3 w-full text-center opacity-100 2xl:-mt-[calc(100%-95.45%)] 2xl:z-40 2xl:opacity-0 2xl:group-hover:opacity-100;
 }
 .gridTitle, .gridClient {
-    @apply font-favorit text-base sm:text-lg text-black md:text-black font-light;
+    @apply font-light text-base sm:text-lg text-black md:text-black font-light;
 }
 .gridItalic {
     @apply font-times text-center py-1 text-lg mx-2 text-black md:text-black 2xl:block;
@@ -151,7 +151,7 @@ PersonStyle {
 }
 
 .credits {
-    @apply font-goodsans text-xs py-4 mx-auto text-center w-full;
+    @apply font-folio text-black text-xs py-4 mx-auto text-center w-full;
 }
 
 .videoCont {
@@ -167,21 +167,21 @@ PersonStyle {
     @apply flex flex-row inline-flex w-full mx-0 md:px-0 md:mt-20 md:py-2 justify-center text-center;
 }
 .mainTitle, .mainClient {
-    @apply  leading-normal font-goodsans text-5xl;
+    @apply  leading-normal font-folio text-black text-5xl;
 }
 .mainItalic {
-    @apply font-goodsans pt-1.5 text-5xl mx-4;
+    @apply font-folio text-black pt-1.5 text-5xl mx-4;
 }
 
 /* Footer */
 
 .footerBox {
-    @apply /* pt-10*/ pb-10 w-full text-center font-favorit font-light text-base;
+    @apply /* pt-10*/ pb-10 w-full text-center font-light font-light text-base;
 }
 
 
 .portableText {
-    @apply py-5 w-[calc(100%-2em)] lg:w-8/12 mx-auto text-center text-xl font-favorit font-light;
+    @apply py-5 w-[calc(100%-2em)] lg:w-8/12 mx-auto text-center text-xl font-light text-black ;
 }
 
 .portableText p::before {
@@ -195,7 +195,7 @@ PersonStyle {
 /* About Page */
 
 .PageCont {
-    @apply m-auto px-40 my-52 font-favorit;
+    @apply m-auto px-40 my-52 font-light;
 }
 .PageBio a{
     @apply underline;
@@ -207,7 +207,7 @@ PersonStyle {
 }
 
 .BioPortableText {
-    @apply py-5 mx-auto text-left text-base font-favorit font-light;
+    @apply py-5 mx-auto text-left text-base font-light font-light;
 }
 
 .BioPortableText p::before {
