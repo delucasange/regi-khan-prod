@@ -14,13 +14,8 @@
   }
 
   @font-face {
-    font-family: 'arrow';
-    src: url('../fonts/HelveticaNowText-Regular.ttf');
-  }
-
-  @font-face {
     font-family: 'goodsans';
-    src: url('../fonts/DMsans-Regular.ttf');
+    src: url('../fonts/DMSans-Regular.ttf');
   }
 
   @font-face {
