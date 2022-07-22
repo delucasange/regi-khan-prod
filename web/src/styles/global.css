@@ -31,9 +31,12 @@
     display: inline;
 }
 
+.HeaderWrap {
+    @apply z-0 bg-energy;
+}
 /* main header style*/
 .headerStyle {
-    @apply  fixed lg:relative flex overflow-x-hidden font-folio text-black text-5xl pt-2 pb-4;
+    @apply z-0 block lg:relative flex overflow-x-hidden font-folio text-black text-5xl pt-2 pb-4;
 }  
 
 /* Respnsive Navigation */
@@ -46,7 +49,7 @@
 }
 
 .RespNavbar {
-    @apply z-20 fixed bg-white w-full text-5xl font-folio text-black flex h-screen list-none capitalize; 
+    @apply z-40 -mt-20 fixed bg-white w-full text-5xl font-folio text-black flex h-screen list-none capitalize; 
 }
 
 .RespOptions{
@@ -106,7 +109,7 @@ PersonStyle {
 
 /* Work List Grid on home */
 .workList {
-    @apply grid grid-cols-1 py-16 md:px-10 sm:py-44 md:py-24 lg:grid-cols-2 2xl:grid-cols-3;
+    @apply grid grid-cols-1 py-16 md:px-10 sm:py-44 md:pt-8 md:pb-20 lg:grid-cols-2 2xl:grid-cols-3;
 }
 .workListTitle {
     @apply text-sm sm:text-lg font-folio text-black py-6 pl-10 capitalize;
