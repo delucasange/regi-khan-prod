@@ -13,7 +13,8 @@ const Pages = ({ data }) => {
     const pageImageUrl = data.sanityPages.image.asset.url;
 
     const Bio = data.sanityPages._rawBio;
-
+    const Contact = data.sanityPages.description;
+    console.log(Contact);
     // console.log(Bio);
 
     return ( 
@@ -21,16 +22,17 @@ const Pages = ({ data }) => {
 <Layout>
          <Seo title={pageTitle} />
 
-   <div className="z-0 top-0 w-full flex flex-row h-screen">
-      <div className="h-screen w-6/12 container bg-agent">
-      <img className="m-auto my-28" src={pageImageUrl} alt={data.sanityPages.image.alt}/>
+   <div className="page-wrap">
+      <div className="rightwrap">
+      <img className="AboutImage" src={pageImageUrl} alt={data.sanityPages.image.alt}/><p className="imgDesc">{data.sanityPages.image.alt}</p>
       </div>
-      <div className="w-6/12 container">
+      <div className="leftwrap">
         <div className="PageCont">
-          <h1>{pageTitle}</h1>
-          <div className="BioPortableText">
-                {Bio && <BioPortableText blocks={Bio} />}
-              </div>
+            <h1 className="PageTitle">{pageTitle}</h1>
+            <div className="BioPortableText">
+                  {Bio && <BioPortableText blocks={Bio} />}      
+            </div>
+          {Contact && <p className="Contact">{Contact}</p>}
         </div>
       </div>
    </div>

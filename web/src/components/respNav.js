@@ -4,7 +4,7 @@ import Popup from './popup';
 
 //  <div className="navWrap">
 // </div>
-const RespNav = ( ) => {
+const RespNav = () => {
     const data = useStaticQuery(graphql`{
       allSanityCategory(sort: {fields: order, order: ASC}) {
         nodes {
@@ -26,15 +26,16 @@ const RespNav = ( ) => {
     return ( <>
   
   <div className="RespNavWrap">
-    <div className="toggleMenu" role="menu"  onClick={togglePopup} onKeyDown={togglePopup}>Menu</div>
+    <button className="toggleMenu" role="menu"  onClick={togglePopup} onKeyDown={togglePopup}>Menu</button>
  
       {isOpen && 
     <Popup
       content={
+        <>
       <div className="RespNavbar">
-        <ul className="RespOptions">
+      {/* <h1 className="RespNavIntro">Regina Khanipova</h1> */}
+      <ul className="RespOptions">
       <Link to="/about"><li>about</li></Link>
-  
       {catPost.map( tag => ( 
         <Link key={tag.title} to={`/work/${tag.title}`} state={{ category:`${tag.title}` }} activeClassName="active-link">
         <li key={tag.title}> <p className="navtag">{tag.title}</p></li></Link>)
@@ -42,7 +43,7 @@ const RespNav = ( ) => {
       <Link to="/"><li>All</li></Link>
       </ul>
       </div>
-
+      </>
       }
       handleClose={togglePopup}
     />}

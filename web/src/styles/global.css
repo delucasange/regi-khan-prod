@@ -23,6 +23,8 @@
     src: url('../fonts/TimesNow-SemiLightItalic.ttf');
   }
 
+
+
 .hide {
     display: none;
 }
@@ -32,11 +34,12 @@
 }
 
 .HeaderWrap {
-    @apply z-0 bg-energy;
+    @apply z-40 fixed w-full;
 }
+
 /* main header style*/
 .headerStyle {
-    @apply z-0 block lg:relative flex overflow-x-hidden font-folio text-black text-5xl pt-2 pb-4;
+    @apply font-folio text-black text-5xl pt-2 pb-4;
 }  
 
 /* Respnsive Navigation */
@@ -45,15 +48,20 @@
 }
 
 .toggleMenu {
-    @apply z-10 w-full text-5xl bg-gradient-to-t from-white font-folio text-black m-auto text-center pt-4 pb-4 fixed inset-x-0 bottom-0 lg:hidden;
+    @apply z-20 w-full text-5xl bg-gradient-to-t from-white font-folio text-black m-auto text-center pt-4 pb-4 fixed inset-x-0 bottom-0 lg:hidden;
 }
 
+
 .RespNavbar {
-    @apply z-40 -mt-20 fixed bg-white w-full text-5xl font-folio text-black flex h-screen list-none capitalize; 
+    @apply z-30 bg-lilac fixed w-full flex h-screen list-none; 
+}
+
+.RespNavIntro {
+    @apply pl-40 pt-10 text-5xl text-black font-folio flex ;
 }
 
 .RespOptions{
-    @apply  flex flex-col my-auto pl-10 gap-4;
+    @apply  flex flex-col my-auto pl-10 gap-4 text-5xl font-folio text-black capitalize;
 }
 
 .RespClose {
@@ -109,7 +117,7 @@ PersonStyle {
 
 /* Work List Grid on home */
 .workList {
-    @apply grid grid-cols-1 py-16 md:px-10 sm:py-44 md:pt-8 md:pb-20 lg:grid-cols-2 2xl:grid-cols-3;
+    @apply grid grid-cols-1 py-16 md:px-10 sm:py-20 md:py-16 lg:grid-cols-2 2xl:grid-cols-3;
 }
 .workListTitle {
     @apply text-sm sm:text-lg font-folio text-black py-6 pl-10 capitalize;
@@ -197,20 +205,43 @@ PersonStyle {
 }
 /* About Page */
 
+.page-wrap {
+    @apply z-0 top-0 w-full lg:flex lg:flex-row h-screen;
+}
+
+.rightwrap {
+    @apply w-full block sm:bg-agent sm:p-20 lg:p-0 xl:w-6/12 xl:h-screen xl:container;
+}
+
+.leftwrap {
+    @apply w-full xl:w-6/12 xl:container;
+}
+
+.PageTitle {
+    @apply text-center uppercase text-sm;
+}
+
+.AboutImage {
+    @apply mt-0 m-auto md:pt-10 lg:pt-32 lg:px-16 xl:pt-24 2xl:pt-24;
+}
+
+.imgDesc {
+    @apply text-center pt-2 text-xs uppercase antialiased font-folio;
+}
 .PageCont {
-    @apply m-auto px-40 my-52 font-light;
+    @apply m-auto pt-10 pb-20 px-8 md:px-10 lg:pt-28 lg:px-14 xl:pt-44 2xl:pt-0 2xl:px-24 2xl:my-32 font-light;
 }
 .PageBio a{
     @apply underline;
 }
 
-.PageCont p::before {
+.BioPortableText p::before {
     content: "  ";
     white-space: pre;
 }
 
 .BioPortableText {
-    @apply py-5 mx-auto text-left text-base font-light font-light;
+    @apply mx-auto py-6 text-left text-lg font-light font-light 2xl:py-5  indent-12;
 }
 
 .BioPortableText p::before {
