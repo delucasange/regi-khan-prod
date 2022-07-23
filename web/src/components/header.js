@@ -17,18 +17,26 @@ const Header = () => {
 
   return (
   <>
-
-<div className="HeaderWrap">
+{/* <div className="HeaderWrap">
     <Link to="/">
-      <div class="relative flex flex-row overflow-x-hidden">
+      <div class="relative flex flex-row overflow-x-hidden scrollbar-hide">
         <div class="whitespace-nowrap animate-marquee">
-        <h1 className="headerStyle">&nbsp;{siteTitle} {data.sanitySiteSettings.subtitle}</h1>
+        <p className="headerStyle">{siteTitle} {data.sanitySiteSettings.subtitle}</p>
         </div>
 
         <div class="absolute top-0 animate-marquee2 whitespace-nowrap">
-        <h1 className="headerStyle">&nbsp;{siteTitle} {data.sanitySiteSettings.subtitle}</h1>
+        <p className="headerStyle">{siteTitle} {data.sanitySiteSettings.subtitle}</p>
         </div>
       </div>
+      <div className="z-0">
+      <div></div>
+      <h1 className="headerOption2 text-[3.8vw] text-center ">{siteTitle} {data.sanitySiteSettings.subtitle}</h1>
+      </div>
+    </Link>
+</div> */}
+<div className="headerO2">
+    <Link to="/">
+      <h1 className="h1HeaderO2">{siteTitle} {data.sanitySiteSettings.subtitle}</h1>
     </Link>
 </div>
   </>)

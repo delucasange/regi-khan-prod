@@ -34,12 +34,21 @@
 }
 
 .HeaderWrap {
-    @apply z-40 fixed w-full;
+    @apply z-40 fixed w-full mb-4;
+}
+
+/* Option 2 Header */
+.headerO2 {
+    @apply z-40 w-full fixed py-4;
+}
+
+.h1HeaderO2 {
+    @apply font-folio text-center text-3xl lg:text-[3.3vw];
 }
 
 /* main header style*/
 .headerStyle {
-    @apply font-folio text-black text-5xl pt-2 pb-4;
+    @apply font-folio text-black text-5xl mx-4 mt-2 mb-4;
 }  
 
 /* Respnsive Navigation */
@@ -117,7 +126,7 @@ PersonStyle {
 
 /* Work List Grid on home */
 .workList {
-    @apply grid grid-cols-1 py-16 md:px-10 sm:py-20 md:py-16 lg:grid-cols-2 2xl:grid-cols-3;
+    @apply grid grid-cols-1 pt-24 pb-16 md:px-10 sm:pt-28 sm:pb-20 md:pt-24 md:pb-16 lg:pt-20 lg:grid-cols-2 2xl:grid-cols-3;
 }
 .workListTitle {
     @apply text-sm sm:text-lg font-folio text-black py-6 pl-10 capitalize;
