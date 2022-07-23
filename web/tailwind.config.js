@@ -1,6 +1,11 @@
 //** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
+  purge: [
+    './src/components/*.js',
+    './src/pages/*.js',
+    './src/pages/work/*.js',
+  ],
   theme: {
     colors: {
       'white': '#FFFFFF',
