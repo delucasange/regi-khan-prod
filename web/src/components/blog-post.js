@@ -36,19 +36,14 @@ return (
                 <h1><span className="mainTitle">{title}</span><span className="mainItalic">for</span><span className="mainClient">{client}</span></h1>  
     </div>
     <article>
-      <Container>
-              
+      <Container> 
         <div>
-  
-          
           {videos && (  
             <div className="videoCont">
                {videos.map((video)=> <Video key={video.title} videoSrcURL={video.url} videoTitle={video.title} />
                )}
             </div>
           )}
-
-
       {stories && (  
             <div className="storyCont">
                {stories.map((story)=> <Story key={story.title} videoSrcURL={story.url} videoTitle={story.title} />
