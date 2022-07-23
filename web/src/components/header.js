@@ -21,11 +21,11 @@ const Header = () => {
 <div className="HeaderWrap">
     <Link to="/">
       <div class="relative flex flex-row overflow-x-hidden">
-        <div class="whitespace-nowrap">
+        <div class="whitespace-nowrap animate-marquee">
         <h1 className="headerStyle">&nbsp;{siteTitle} {data.sanitySiteSettings.subtitle}</h1>
         </div>
 
-        <div class="absolute top-0 whitespace-nowrap">
+        <div class="absolute top-0 animate-marquee2 whitespace-nowrap">
         <h1 className="headerStyle">&nbsp;{siteTitle} {data.sanitySiteSettings.subtitle}</h1>
         </div>
       </div>
