@@ -18,13 +18,13 @@ const Navigation = ( ) => {
 
     return ( <>
       <div className="navbar">
-      <Link to="/about"><li>about</li></Link>
+      <Link to="/about" activeClassName="active-link"><li>about</li></Link>
   
       {catPost.map( tag => ( 
         <Link key={tag.title} to={`/work/${tag.title}`} state={{ category:`${tag.title}` }} activeClassName="active-link">
         <li key={tag.title}> <p className="navtag">{tag.title}</p></li></Link>)
       )}
-      <Link to="/"><li>All</li></Link>
+      <Link to="/" activeClassName="active-link"><li>All</li></Link>
       </div>
     </> 
     

@@ -36,7 +36,7 @@ const Header = () => {
 </div> */}
 <div className="headerO2">
     <Link to="/">
-      <h1 className="h1HeaderO2">{siteTitle} {data.sanitySiteSettings.subtitle}</h1>
+      <h1 className="h1HeaderO2">{siteTitle} <span className="hidden lg:inline-block">{data.sanitySiteSettings.subtitle}</span></h1>
     </Link>
 </div>
   </>)

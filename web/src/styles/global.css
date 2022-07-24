@@ -13,9 +13,11 @@
     src: url('../fonts/Folio-Light.otf');
   }
 
+  /* Futura-Medium-01 */
+
   @font-face {
     font-family: 'folio';
-    src: url('../fonts/HelveticaNowText-Regular.ttf');
+    src: url('../fonts/Folio-Light.otf');
   }
 
   @font-face {
@@ -39,11 +41,11 @@
 
 /* Option 2 Header */
 .headerO2 {
-    @apply z-40 w-full fixed py-4;
+    @apply z-40 w-full fixed pt-2 pb-4 md:pt-0 lg:pt-0;
 }
 
 .h1HeaderO2 {
-    @apply font-folio text-center text-3xl lg:text-[3.3vw];
+    @apply font-folio text-center text-[12vw] md:text-[10vw]  lg:text-[3.7vw];
 }
 
 /* main header style*/
@@ -74,7 +76,7 @@
 }
 
 .RespClose {
-    @apply fixed bottom-0 z-40 w-full text-center pb-4 text-5xl lg:hidden;
+    @apply fixed bottom-0 z-40 w-full text-center pb-4 text-5xl font-folio lg:hidden;
 }
 /* Desktop Navigation */
 .navWrap {
