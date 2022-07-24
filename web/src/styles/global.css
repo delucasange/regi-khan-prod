@@ -17,7 +17,7 @@
 
   @font-face {
     font-family: 'folio';
-    src: url('../fonts/Folio-Light.otf');
+    src: url('../fonts/HelveticaNowText-Regular.ttf');
   }
 
   @font-face {
@@ -45,7 +45,7 @@
 }
 
 .h1HeaderO2 {
-    @apply font-folio text-center text-[12vw] md:text-[10vw]  lg:text-[3.7vw];
+    @apply font-folio text-center text-[11vw] md:text-[10vw]  lg:text-[3.3vw];
 }
 
 /* main header style*/
